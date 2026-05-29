@@ -76,12 +76,15 @@
   visibility: hidden;
 }
 
-/* Welcome popup */
+/* Welcome popup — above closed panel, below FAB */
+.gm-chat-welcome[hidden] {
+  display: none !important;
+}
 .gm-chat-welcome {
   position: fixed;
   bottom: 88px;
   right: 24px;
-  z-index: 898;
+  z-index: 899;
   max-width: min(272px, calc(100vw - 96px));
   pointer-events: none;
   opacity: 0;
@@ -161,7 +164,7 @@
   position: fixed;
   bottom: 92px;
   right: 24px;
-  z-index: 899;
+  z-index: 898;
   width: 380px;
   max-width: calc(100vw - 32px);
   max-height: min(560px, calc(100vh - 120px));
@@ -180,6 +183,7 @@
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
+  z-index: 899;
 }
 
 /* Header */

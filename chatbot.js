@@ -37,9 +37,11 @@
       <div class="gm-chat-brand">GM Carpentry · Oakville, ON</div>
     </div>`;
 
-  const wrapper = document.createElement('div');
-  wrapper.innerHTML = html;
-  document.body.appendChild(wrapper);
+  const mount = document.createElement('div');
+  mount.innerHTML = html;
+  while (mount.firstChild) {
+    document.body.appendChild(mount.firstChild);
+  }
 
   /* ---- Elements ---- */
   const fab     = document.getElementById('gmChatFab');
@@ -85,9 +87,18 @@
     if (isOpen) return;
     welcomeVisible = true;
     welcomeEl.removeAttribute('hidden');
-    requestAnimationFrame(function () {
+    var revealed = false;
+    function revealWelcome() {
+      if (revealed) return;
+      revealed = true;
       welcomeEl.classList.add('is-visible');
-    });
+    }
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(revealWelcome);
+    } else {
+      revealWelcome();
+    }
+    window.setTimeout(revealWelcome, 50);
   }
 
   function toggle(open) {
@@ -104,11 +115,15 @@
     }
   }
   fab.addEventListener('click', function () { toggle(); });
-  welcomeCloseBtn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    dismissWelcome();
-  });
-  closeBtn.addEventListener('click', function () { toggle(false); });
+  if (welcomeCloseBtn) {
+    welcomeCloseBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      dismissWelcome();
+    });
+  }
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () { toggle(false); });
+  }
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && isOpen) toggle(false);
   });
