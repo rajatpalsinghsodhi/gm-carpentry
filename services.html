@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Services · GM Carpentry &amp; Trimworks</title>
+<meta name="description" content="Crown moulding, trim work, casing, baseboards, wainscoting, waffle ceilings, doors and interior finish carpentry across Halton Region and nearby areas, including Mississauga.">
+
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script src="tw-config.js"></script>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="chatbot.css">
+</head>
+<body class="bg-surface text-ink font-sans">
+
+<!-- ───────── UTILITY BAR ───────── -->
+<div class="bg-surface-ink text-cream/80 text-[12px] tracking-[0.18em] uppercase">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-9">
+    <div class="hidden md:flex items-center gap-6">
+      <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-walnut-3"></span>Request a free quote</span>
+      <span class="opacity-50">Oakville · Halton · Mississauga</span>
+    </div>
+    <div class="flex items-center gap-5 ml-auto">
+      <a href="tel:+16472895306" class="hover:text-walnut-tint transition-colors" data-track="call">(647) 289&nbsp;5306</a>
+      <span class="opacity-30 hidden md:inline">/</span>
+      <a href="mailto:studio@gmcarpentry.ca" class="hidden md:inline hover:text-walnut-tint transition-colors">studio@gmcarpentry.ca</a>
+    </div>
+  </div>
+</div>
+
+<!-- ───────── HEADER ───────── -->
+<header data-header class="sticky top-0 z-40 bg-surface/90 backdrop-blur border-b border-rule transition-all">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-[76px]">
+    <a href="index.html" class="flex items-center gap-3 text-ink" aria-label="GM Carpentry — Home">
+      <img src="logo.png" class="h-10 w-auto pointer-events-none" alt="GM Carpentry">
+    </a>
+    <nav class="hidden lg:flex items-center gap-9">
+      <a href="index.html"     class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Home</a>
+      <a href="portfolio.html" class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Portfolio</a>
+      <a href="services.html"  class="text-[13px] uppercase tracking-[0.18em] font-semibold text-walnut border-b border-walnut pb-1">Services</a>
+      <a href="index.html#process"   class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Process</a>
+      <a href="index.html#materials" class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Materials</a>
+      <a href="contact.html"   class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="btn btn-primary hidden md:inline-flex" data-track="quote">Get a free quote <span class="arrow">→</span></a>
+      <button class="lg:hidden text-ink menu-btn -mr-2" data-mobile-toggle aria-label="Open menu">
+        <span class="material-symbols-outlined" style="font-size:28px;">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<aside class="mobile-menu fixed inset-0 z-50 bg-surface flex flex-col" data-mobile-menu>
+  <div class="flex items-center justify-between h-[76px] px-margin-mobile border-b border-rule">
+    <img src="logo.png" class="h-10 w-auto pointer-events-none" alt="GM Carpentry">
+    <button data-mobile-close class="menu-btn -mr-2" aria-label="Close menu"><span class="material-symbols-outlined" style="font-size:28px;">close</span></button>
+  </div>
+  <nav class="flex flex-col gap-1 p-margin-mobile">
+    <a href="index.html"     class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Home</a>
+    <a href="portfolio.html" class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Portfolio</a>
+    <a href="services.html"  class="py-4 border-b border-rule font-sans font-bold text-h4 text-walnut">Services</a>
+    <a href="index.html#process"   class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Process</a>
+    <a href="index.html#materials" class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Materials</a>
+    <a href="contact.html"   class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Contact</a>
+    <a href="contact.html" class="btn btn-primary mt-6 self-start" data-track="quote">Get a free quote →</a>
+  </nav>
+</aside>
+
+<main>
+
+<!-- ───────── HEADER ───────── -->
+<section class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop pt-10 md:pt-16 pb-lg">
+  <div class="flex items-center justify-between mb-10 md:mb-12">
+    <span class="badge-arch"><span class="numeral text-[14px] leading-none">III</span>&nbsp;Services</span>
+    <a href="index.html" class="text-[11px] tracking-[0.22em] uppercase text-ink-3 hover:text-walnut transition-colors">← Return</a>
+  </div>
+
+  <div class="grid grid-cols-12 gap-gutter items-end">
+    <div class="col-span-12 lg:col-span-7">
+      <h1 class="hero-title font-sans font-bold text-[44px] sm:text-[60px] md:text-[88px] leading-[0.98] tracking-[-0.025em] text-ink">
+        Trim &amp; finish work<br><span class="text-walnut">done properly.</span>
+      </h1>
+    </div>
+    <div class="col-span-12 lg:col-span-4 lg:col-start-9">
+      <p class="text-body-lg text-ink-2">GM Carpentry handles crown moulding, baseboards, casing, wainscoting, waffle ceilings, doors and interior finish carpentry across Halton Region and nearby areas, including Mississauga.</p>
+      <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 font-sans text-[11px] tracking-[0.22em] uppercase text-ink-3">
+        <a href="#molding" class="hover:text-walnut"><span class="numeral text-[12px]">i</span> · Moulding</a>
+        <a href="#wainscoting" class="hover:text-walnut"><span class="numeral text-[12px]">ii</span> · Wainscoting</a>
+        <a href="#cabinetry" class="hover:text-walnut"><span class="numeral text-[12px]">iii</span> · Cabinetry</a>
+        <a href="#ceilings" class="hover:text-walnut"><span class="numeral text-[12px]">iv</span> · Ceilings</a>
+      </div>
+    </div>
+  </div>
+  <div class="ruler mt-10"></div>
+</section>
+
+<!-- ───────── QUOTE PRIMER ───────── -->
+<section class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop pb-xl">
+  <div class="grid grid-cols-12 gap-gutter">
+    <article class="service-primer-card col-span-12 md:col-span-6 lg:col-span-3 reveal">
+      <span class="eyebrow no-rule">What's included</span>
+      <ul class="text-body-sm">
+        <li>Measure, profile selection and material guidance.</li>
+        <li>Install, clean caulking and paint-ready finishing.</li>
+        <li>A walkthrough before the job wraps.</li>
+      </ul>
+    </article>
+    <article class="service-primer-card col-span-12 md:col-span-6 lg:col-span-3 reveal">
+      <span class="eyebrow no-rule">Best for</span>
+      <ul class="text-body-sm">
+        <li>Homeowners updating one room.</li>
+        <li>Renovations needing trim packages.</li>
+        <li>Detail work where corners and transitions matter.</li>
+      </ul>
+    </article>
+    <article class="service-primer-card col-span-12 md:col-span-6 lg:col-span-3 reveal">
+      <span class="eyebrow no-rule">What affects price</span>
+      <ul class="text-body-sm">
+        <li>Room count, ceiling height and wall condition.</li>
+        <li>Profile complexity and material choice.</li>
+        <li>Painting, prep work and timeline.</li>
+      </ul>
+    </article>
+    <article class="service-primer-card col-span-12 md:col-span-6 lg:col-span-3 reveal">
+      <span class="eyebrow no-rule">Start a quote</span>
+      <p class="text-body-sm text-ink-2 mt-4">Send your city, rooms, photos if available, and the trim type you have in mind. Gary will help narrow it down.</p>
+      <div class="mt-5 flex flex-col gap-3">
+        <a href="contact.html" class="btn btn-primary w-full" data-track="quote">Get a free quote</a>
+        <a href="tel:+16472895306" class="btn btn-ghost w-full" data-track="call">Call Gary</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ───────── SERVICE I: MOULDING ───────── -->
+<section id="molding" class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+  <div class="grid grid-cols-12 gap-gutter items-center">
+    <div class="col-span-12 lg:col-span-7 lg:order-2 reveal">
+      <figure class="img-frame aspect-[4/3]">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpoDObkYkWbWQHew9vJHsAb-hzBG9FBXuQj9JxK_pEI6QXw0c0xPLHPZjDaS3V6uVCAZ4vI-jGRDj8LSnZcmXtZAYG3GJRQgkN2x1Pv_LW7h_cKOS6hHcICCf8unfpHAH9GlKuiWqxOGOD8b0N-AJwkciqXJjoRfWGD59S_exMDpzx_k76IB8EKCSXl-eU-VEM0L9gciQAOUFQgDHsh7fe30gFOFD7O-tpKrC4cF2ps64dtqfO0a8XsrTMRVUr_uxi7dkWiRtbOwg" alt="Custom-milled white crown molding intersecting at a corner">
+      </figure>
+    </div>
+    <div class="col-span-12 lg:col-span-5 lg:pr-12 lg:order-1 reveal">
+      <div class="svc-heading">
+        <span class="numeral text-[64px] leading-none">i.</span>
+        <span class="eyebrow no-rule">Custom Moulding &amp; Trim</span>
+      </div>
+      <h2 class="font-sans font-bold text-h2 text-ink">Crown, baseboards &amp; casing.</h2>
+      <p class="text-body-lg text-ink-2 mt-5">The bread and butter of the business — clean mitres, tight copes, and trim that looks right after paint. Heritage profiles and modern builds welcome.</p>
+      <ul class="mt-7 divide-y divide-rule border-y border-rule">
+        <li class="flex items-center justify-between py-3 text-body"><span>Historical replication &amp; restoration</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+        <li class="flex items-center justify-between py-3 text-body"><span>Multi-piece built-up crown</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+        <li class="flex items-center justify-between py-3 text-body"><span>Custom knife profiles, in-house</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+        <li class="flex items-center justify-between py-3 text-body"><span>Interior doors &amp; hardware installation</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+        <li class="flex items-center justify-between py-3 text-body"><span>Home renovation trim packages</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+      </ul>
+      <div class="mt-6 grid grid-cols-3 gap-4 stat-caption text-ink-3">
+        <div><div class="text-walnut">Lead</div>2–4 wks</div>
+        <div><div class="text-walnut">Material</div>Solid hardwood</div>
+        <div><div class="text-walnut">Finish</div>Site or shop</div>
+      </div>
+      <a href="contact.html" class="btn-link mt-6 inline-flex" data-track="quote">Quote moulding work <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── SERVICE II: WAINSCOTING ───────── -->
+<section id="wainscoting" class="bg-surface-2 border-y border-rule">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+    <div class="grid grid-cols-12 gap-gutter items-center">
+      <div class="col-span-12 lg:col-span-7 reveal">
+        <figure class="img-frame aspect-[4/3]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaKXCy7vRviO4E9kSplF_461TkZr4yOX1VkR4mrj5S-ryCPEqYNG4RgoZag9IX-FS7Jcn36kxAXK8vdooEBhDvh8g_Y_EVMwqYR00uqS_xrl934FQK-lFjsM0ct8s_B1L5rreroYwh8NbKPkk4kdscr6lcXeUuqkUUVLuaWKLy3B1gE8lTQWHeBamkoMQvIILUpfH2vvmrKx0-lEzcFSy35QUOs9pw2L3kv0F2eZdhA-rUOQ-wIMKh60_itcugX1Zm6sHeKIx9WIg" alt="Raised-panel wainscoting on a dark feature wall">
+        </figure>
+      </div>
+      <div class="col-span-12 lg:col-span-5 lg:pl-12 reveal">
+        <div class="svc-heading">
+          <span class="numeral text-[64px] leading-none">ii.</span>
+          <span class="eyebrow no-rule">Wainscoting &amp; Feature Walls</span>
+        </div>
+      <h2 class="font-sans font-bold text-h2 text-ink">Walls that stand out.</h2>
+      <p class="text-body-lg text-ink-2 mt-5">Raised panel, beadboard or square-grid wainscoting — measured room by room so panels line up at outlets and corners.</p>
+        <ul class="mt-7 divide-y divide-rule border-y border-rule">
+          <li class="flex items-center justify-between py-3 text-body"><span>Traditional raised panel &amp; beadboard</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+          <li class="flex items-center justify-between py-3 text-body"><span>Modern geometric panelling</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+          <li class="flex items-center justify-between py-3 text-body"><span>Integrated hidden jib doors</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+          <li class="flex items-center justify-between py-3 text-body"><span>Picture-frame applied mould</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+        </ul>
+        <div class="mt-6 grid grid-cols-3 gap-4 stat-caption text-ink-3">
+          <div><div class="text-walnut">Lead</div>3–6 wks</div>
+          <div><div class="text-walnut">Material</div>Poplar · oak</div>
+          <div><div class="text-walnut">Scale</div>One wall to suite</div>
+        </div>
+        <a href="contact.html" class="btn-link mt-6 inline-flex" data-track="quote">Quote wainscoting <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── SERVICE III: CABINETRY ───────── -->
+<section id="cabinetry" class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+  <div class="grid grid-cols-12 gap-gutter items-center">
+    <div class="col-span-12 lg:col-span-7 lg:order-2 reveal">
+      <figure class="img-frame aspect-[4/3]">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMJZq3zwt9kOW5NV8D4fra05pydhw60c2UBctLsXGwnvq0vd1roCpDUkwDZC58F8EbvF8s6ZoecNJ1ky4oX0RT36-xIJ5t_XLPaxwFc50OFAbvFUYNA1iE0dUz5Qn61Ker01MdI3KAaZxAy_UFEdKRrqGMeXdV9FPqceuzuujbrmGbnoqHSgrbdGCIzGFc0TS5JnFBAbYBUduMgQv15CjTXD5hLI2A-9Bb4WlpwJCh7X9-MduVFhXFnJsI9RxEhw_sccEf0kw3-00" alt="Floor-to-ceiling walnut library built-ins">
+      </figure>
+    </div>
+    <div class="col-span-12 lg:col-span-5 lg:pr-12 lg:order-1 reveal">
+      <div class="svc-heading">
+        <span class="numeral text-[64px] leading-none">iii.</span>
+        <span class="eyebrow no-rule">Built-ins &amp; Cabinetry</span>
+      </div>
+      <h2 class="font-sans font-bold text-h2 text-ink">When you need more than trim.</h2>
+      <p class="text-body-lg text-ink-2 mt-5">Mudrooms, mantels, entertainment walls and closets — built to fit your space. Ask if this is part of your renovation; trim packages are our core focus.</p>
+      <ul class="mt-7 divide-y divide-rule border-y border-rule">
+        <li class="flex items-center justify-between py-3 text-body"><span>Library shelving &amp; studies</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+        <li class="flex items-center justify-between py-3 text-body"><span>Mantels &amp; surrounds</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+        <li class="flex items-center justify-between py-3 text-body"><span>Bespoke closets &amp; mudrooms</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+        <li class="flex items-center justify-between py-3 text-body"><span>Entertainment walls &amp; bars</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+      </ul>
+      <div class="mt-6 grid grid-cols-3 gap-4 stat-caption text-ink-3">
+        <div><div class="text-walnut">Lead</div>6–12 wks</div>
+        <div><div class="text-walnut">Material</div>Walnut · oak</div>
+        <div><div class="text-walnut">Finish</div>Hand-rubbed</div>
+      </div>
+      <a href="contact.html" class="btn-link mt-6 inline-flex" data-track="quote">Ask about built-ins <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── SERVICE IV: CEILINGS ───────── -->
+<section id="ceilings" class="bg-surface-2 border-y border-rule">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+    <div class="grid grid-cols-12 gap-gutter items-center">
+      <div class="col-span-12 lg:col-span-7 reveal">
+        <figure class="img-frame aspect-[4/3]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRU4yYHa0syvB1RDgiguOwZAVxaV5GdvLLYaAjhK5PLiIyS5fqUyOoK0bKc33TDRvijhK2OCbNXlFSRm1IvCLW1lF4TkmXncmWo0i1Pwdtupb7myoK30Hd3JsLVHo_z7KBJ48jQi5jKhUV6l_6YauuMhUWrCkfyBu83Tco-sfzcPndiiJUZSe_e7duKG1WxE5XPC1sBaQ7BFTnVHAlbjstLCuNcl1l33nznS2hnS_at3G2U9--8akYKSFIOahtCuDAJbnt7xgmwI0" alt="White coffered ceiling with heavy crown moulding">
+        </figure>
+      </div>
+      <div class="col-span-12 lg:col-span-5 lg:pl-12 reveal">
+        <div class="svc-heading">
+          <span class="numeral text-[64px] leading-none">iv.</span>
+          <span class="eyebrow no-rule">Coffered, Waffle &amp; Beamed Ceilings</span>
+        </div>
+      <h2 class="font-sans font-bold text-h2 text-ink">Ceilings that add character.</h2>
+      <p class="text-body-lg text-ink-2 mt-5">Waffle ceilings and coffered grids are a popular upgrade — we install the structure, moulding and details so the ceiling feels finished, not an afterthought.</p>
+        <ul class="mt-7 divide-y divide-rule border-y border-rule">
+          <li class="flex items-center justify-between py-3 text-body"><span>Classic grid coffers with crown</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+          <li class="flex items-center justify-between py-3 text-body"><span>Waffle ceiling treatments</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+          <li class="flex items-center justify-between py-3 text-body"><span>Reclaimed timber beams</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+          <li class="flex items-center justify-between py-3 text-body"><span>Tray ceilings, lighting integration</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+          <li class="flex items-center justify-between py-3 text-body"><span>Cove &amp; perimeter detail</span><span class="text-walnut font-mono text-[12px]">→</span></li>
+        </ul>
+        <div class="mt-6 grid grid-cols-3 gap-4 stat-caption text-ink-3">
+          <div><div class="text-walnut">Lead</div>4–8 wks</div>
+          <div><div class="text-walnut">Material</div>Poplar · pine</div>
+          <div><div class="text-walnut">Scale</div>Single room</div>
+        </div>
+        <a href="contact.html" class="btn-link mt-6 inline-flex" data-track="quote">Quote a ceiling <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── ENGAGEMENT MODEL ───────── -->
+<section class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl md:py-2xl">
+  <div class="grid grid-cols-12 gap-gutter mb-12">
+    <div class="col-span-12 lg:col-span-5">
+      <span class="eyebrow">How we engage</span>
+      <h2 class="mt-6 font-sans font-bold text-h2 text-ink">Three ways to start.</h2>
+    </div>
+    <div class="col-span-12 lg:col-span-6 lg:col-start-7">
+      <p class="text-body-lg text-ink-2">Most jobs fall into one of these buckets. Not sure? Call — GM Carpentry will point you in the right direction.</p>
+    </div>
+  </div>
+  <div class="grid grid-cols-12 gap-gutter">
+    <article class="svc-card col-span-12 md:col-span-4">
+      <div class="flex items-center justify-between">
+        <span class="svc-num">A.</span>
+        <span class="badge-arch">Single&nbsp;Room</span>
+      </div>
+      <h3 class="font-sans font-semibold text-h4 text-ink mt-2">A room</h3>
+      <p class="text-body-sm text-ink-3">One discipline applied to one room — a wainscoted dining room, a coffered library, a panelled study.</p>
+      <div class="mt-auto pt-5 border-t border-rule grid grid-cols-2 gap-3 stat-caption text-ink-3">
+        <div><div class="text-walnut">From</div>4 weeks</div>
+        <div><div class="text-walnut">Sketches</div>2 rounds</div>
+      </div>
+    </article>
+    <article class="svc-card col-span-12 md:col-span-4">
+      <div class="flex items-center justify-between">
+        <span class="svc-num">B.</span>
+        <span class="badge-arch">Whole&nbsp;Home</span>
+      </div>
+      <h3 class="font-sans font-semibold text-h4 text-ink mt-2">A full trim package</h3>
+      <p class="text-body-sm text-ink-3">A coordinated trim language across every room of a new build or full renovation. Drawings, knife profiles, install.</p>
+      <div class="mt-auto pt-5 border-t border-rule grid grid-cols-2 gap-3 stat-caption text-ink-3">
+        <div><div class="text-walnut">From</div>16 weeks</div>
+        <div><div class="text-walnut">Sketches</div>5 rounds</div>
+      </div>
+    </article>
+    <article class="svc-card col-span-12 md:col-span-4">
+      <div class="flex items-center justify-between">
+        <span class="svc-num">C.</span>
+        <span class="badge-arch">Trade</span>
+      </div>
+      <h3 class="font-sans font-semibold text-h4 text-ink mt-2">A practice partnership</h3>
+      <p class="text-body-sm text-ink-3">Recurring relationships with architects, interior designers and high-end builders. White-label drawings and install.</p>
+      <div class="mt-auto pt-5 border-t border-rule grid grid-cols-2 gap-3 stat-caption text-ink-3">
+        <div><div class="text-walnut">By</div>Referral</div>
+        <div><div class="text-walnut">Terms</div>Per project</div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ───────── MATERIAL REGISTER ───────── -->
+<section class="bg-surface-ink text-cream py-xl md:py-2xl">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-12 gap-gutter mb-12 md:mb-16">
+      <div class="col-span-12 lg:col-span-6">
+        <span class="eyebrow" style="color:#e9bf91;">The Register</span>
+        <h2 class="mt-6 font-sans font-bold text-h2 text-cream">Specified hardwood,<br>by application.</h2>
+      </div>
+      <div class="col-span-12 lg:col-span-5 lg:col-start-8 self-end">
+        <p class="text-body-lg text-cream/80">Each species is chosen for a reason. The most common we mill and the application we usually mill it for.</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-gutter">
+      <article class="col-span-12 md:col-span-6 lg:col-span-3 border-t border-cream/15 pt-5">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint font-mono">01 · Quercus alba</div>
+        <h3 class="font-sans font-semibold text-h4 text-cream mt-2">White Oak</h3>
+        <p class="text-body-sm text-cream/70 mt-3">Cathedral grain that fumes beautifully. Cabinetry, floors, exposed beams.</p>
+        <div class="mt-4 text-[11px] tracking-[0.18em] uppercase text-cream/50 font-mono">Janka · 1360</div>
+      </article>
+      <article class="col-span-12 md:col-span-6 lg:col-span-3 border-t border-cream/15 pt-5">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint font-mono">02 · Juglans nigra</div>
+        <h3 class="font-sans font-semibold text-h4 text-cream mt-2">Black Walnut</h3>
+        <p class="text-body-sm text-cream/70 mt-3">Rich chocolate with violet undertones. Libraries, studies, fine cabinetry.</p>
+        <div class="mt-4 text-[11px] tracking-[0.18em] uppercase text-cream/50 font-mono">Janka · 1010</div>
+      </article>
+      <article class="col-span-12 md:col-span-6 lg:col-span-3 border-t border-cream/15 pt-5">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint font-mono">03 · Liriodendron</div>
+        <h3 class="font-sans font-semibold text-h4 text-cream mt-2">Yellow Poplar</h3>
+        <p class="text-body-sm text-cream/70 mt-3">A painter's wood. Holds detail. Crown, baseboard, panel mould.</p>
+        <div class="mt-4 text-[11px] tracking-[0.18em] uppercase text-cream/50 font-mono">Janka · 540</div>
+      </article>
+      <article class="col-span-12 md:col-span-6 lg:col-span-3 border-t border-cream/15 pt-5">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint font-mono">04 · Entandrophragma</div>
+        <h3 class="font-sans font-semibold text-h4 text-cream mt-2">Sapele</h3>
+        <p class="text-body-sm text-cream/70 mt-3">Ribbon-figure mahogany cousin. Mantels, large casing, formal rooms.</p>
+        <div class="mt-4 text-[11px] tracking-[0.18em] uppercase text-cream/50 font-mono">Janka · 1410</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CTA ───────── -->
+<section class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl md:py-2xl text-center">
+  <span class="eyebrow center" style="justify-content:center;">Ready for pricing?</span>
+  <h2 class="font-sans font-bold text-h2 text-ink mt-7 max-w-3xl mx-auto">Tell Gary what room you are working on.</h2>
+  <p class="text-body-lg text-ink-2 mt-5 max-w-xl mx-auto">The first conversation is free and low pressure. City, room count, photos and timeline are enough to get started.</p>
+  <div class="mt-9 flex gap-3 justify-center">
+    <a href="contact.html" class="btn btn-primary" data-track="quote">Get a free quote <span class="arrow">→</span></a>
+    <a href="portfolio.html" class="btn btn-ghost" data-track="portfolio">See recent work</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ───────── FOOTER ───────── -->
+<footer class="bg-surface-ink text-cream pt-xl pb-8">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-12 gap-gutter pb-12 md:pb-16 border-b border-cream/15">
+      <div class="col-span-12 md:col-span-5">
+        <span class="inline-flex bg-white p-2">
+          <img src="logo.png" class="h-12 w-auto pointer-events-none" alt="GM Carpentry">
+        </span>
+        <p class="mt-6 text-cream/70 max-w-sm text-body">Trimworks &amp; interior finishes specialist serving Halton Region and nearby areas, including Mississauga. Crown moulding, baseboards, casing, wainscoting and finish carpentry by GM Carpentry.</p>
+      </div>
+      <div class="col-span-6 md:col-span-2">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Site</div>
+        <ul class="space-y-3 text-body-sm text-cream/80">
+          <li><a href="index.html" class="hover:text-walnut-tint">Home</a></li>
+          <li><a href="portfolio.html" class="hover:text-walnut-tint">Portfolio</a></li>
+          <li><a href="services.html" class="hover:text-walnut-tint">Services</a></li>
+          <li><a href="contact.html" class="hover:text-walnut-tint">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-span-6 md:col-span-2">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Disciplines</div>
+        <ul class="space-y-3 text-body-sm text-cream/80">
+          <li><a href="services.html#molding" class="hover:text-walnut-tint">Moulding &amp; Trim</a></li>
+          <li><a href="services.html#wainscoting" class="hover:text-walnut-tint">Wainscoting</a></li>
+          <li><a href="services.html#cabinetry" class="hover:text-walnut-tint">Cabinetry</a></li>
+          <li><a href="services.html#ceilings" class="hover:text-walnut-tint">Ceilings</a></li>
+        </ul>
+      </div>
+      <div class="col-span-12 md:col-span-3">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Reach us</div>
+        <address class="not-italic text-body-sm text-cream/80 space-y-2 leading-[1.7]">
+          <div class="font-medium text-cream">Service area</div>
+          <div>Oakville, ON — Halton Region<br><span class="text-cream/60">Oakville · Burlington · Milton · Georgetown · Halton Hills · Mississauga</span></div>
+          <div class="pt-2">
+            <a href="tel:+16472895306" class="hover:text-walnut-tint">(647) 289-5306</a><br>
+            <a href="mailto:studio@gmcarpentry.ca" class="hover:text-walnut-tint">studio@gmcarpentry.ca</a>
+          </div>
+          <div class="pt-3 text-[12px] text-cream/60">
+            We respond during business hours
+          </div>
+          <div class="pt-2">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=GM+Carpentry+%26+Trimworks" class="hover:text-walnut-tint text-[12px] tracking-[0.14em] uppercase" target="_blank" rel="noopener noreferrer">Google Maps →</a>
+          </div>
+        </address>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-7 text-[11px] tracking-[0.18em] uppercase text-cream/50">
+      <div>© <span data-year>2024</span> GM Carpentry &amp; Trimworks · Oakville, ON</div>
+      <div class="flex items-center gap-6">
+        <span>Oakville · Burlington · Milton · Georgetown · Halton Hills · Mississauga</span>
+        <a href="#" class="hover:text-walnut-tint">Privacy</a>
+        <a href="#" class="hover:text-walnut-tint">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>GM Carpentry &amp; Trimworks — Trim &amp; Interior Finishes in Halton Region</title>
+<meta name="description" content="GM Carpentry &amp; Trimworks is a trim and interior finishes specialist serving Halton Region and nearby areas, including Mississauga. Crown moulding, baseboards, casing, wainscoting, waffle ceilings, doors and finish carpentry.">
+
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script src="tw-config.js"></script>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="chatbot.css">
+</head>
+<body class="bg-surface text-ink font-sans">
+
+<!-- ───────── UTILITY BAR ───────── -->
+<div class="bg-surface-ink text-cream/80 text-[12px] tracking-[0.18em] uppercase">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-9">
+    <div class="hidden md:flex items-center gap-6">
+      <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-walnut-3"></span>Request a free quote</span>
+      <span class="opacity-50">Oakville · Halton · Mississauga</span>
+    </div>
+    <div class="flex items-center gap-5 ml-auto">
+      <a href="tel:+16472895306" class="utility-link hover:text-walnut-tint transition-colors" data-track="call">(647) 289&nbsp;5306</a>
+      <span class="opacity-30 hidden md:inline">/</span>
+      <a href="mailto:studio@gmcarpentry.ca" class="hidden md:inline hover:text-walnut-tint transition-colors">studio@gmcarpentry.ca</a>
+    </div>
+  </div>
+</div>
+
+<!-- ───────── HEADER ───────── -->
+<header data-header class="sticky top-0 z-40 bg-surface/90 backdrop-blur border-b border-rule transition-all" data-screen-label="Header">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-[76px]">
+    <a href="index.html" class="flex items-center gap-3 text-ink" aria-label="GM Carpentry — Home">
+      <img src="logo.png" class="h-10 w-auto pointer-events-none" alt="GM Carpentry">
+    </a>
+    <nav class="hidden lg:flex items-center gap-9">
+      <a href="index.html"     class="text-[13px] uppercase tracking-[0.18em] font-semibold text-walnut border-b border-walnut pb-1">Home</a>
+      <a href="portfolio.html" class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Portfolio</a>
+      <a href="services.html"  class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Services</a>
+      <a href="#process"       class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Process</a>
+      <a href="#materials"     class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Materials</a>
+      <a href="contact.html"   class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="btn btn-primary hidden md:inline-flex" data-track="quote">Get a free quote <span class="arrow">→</span></a>
+      <button class="lg:hidden text-ink menu-btn -mr-2" data-mobile-toggle aria-label="Open menu">
+        <span class="material-symbols-outlined" style="font-size:28px;">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<aside class="mobile-menu fixed inset-0 z-50 bg-surface flex flex-col" data-mobile-menu>
+  <div class="flex items-center justify-between h-[76px] px-margin-mobile border-b border-rule">
+    <img src="logo.png" class="h-10 w-auto pointer-events-none" alt="GM Carpentry">
+    <button data-mobile-close class="menu-btn -mr-2" aria-label="Close menu">
+      <span class="material-symbols-outlined" style="font-size:28px;">close</span>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-1 p-margin-mobile">
+    <a href="index.html"     class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Home</a>
+    <a href="portfolio.html" class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Portfolio</a>
+    <a href="services.html"  class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Services</a>
+    <a href="#process"       class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Process</a>
+    <a href="#materials"     class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Materials</a>
+    <a href="contact.html"   class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Contact</a>
+    <a href="contact.html" class="btn btn-primary mt-6 self-start" data-track="quote">Get a free quote →</a>
+  </nav>
+</aside>
+
+<main data-screen-label="Homepage">
+
+<!-- ───────── HERO ───────── -->
+<section class="relative overflow-hidden" data-screen-label="Hero">
+  <!-- Top hairline grid -->
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop pt-10 md:pt-16">
+    <div class="flex items-center justify-between mb-10 md:mb-14">
+      <span class="badge-arch"><span class="numeral text-[14px] leading-none">I</span>&nbsp;GM Carpentry · Trim &amp; Finishes</span>
+      <span class="coord-line hidden md:inline text-ink-2">N 43°27′ · W 79°41′ · Oakville, ON</span>
+    </div>
+  </div>
+
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-12 gap-gutter items-end pb-12 md:pb-20">
+    <div class="col-span-12 lg:col-span-7 reveal">
+      <h1 class="hero-title font-sans font-bold text-[40px] sm:text-[56px] md:text-[72px] lg:text-[88px] leading-[1.05] sm:leading-[1.02] lg:leading-[0.98] tracking-[-0.025em] text-ink">
+        Crown moulding and trim work<br>
+        <span class="text-walnut">done right</span> —<br>
+        across Halton Region.
+      </h1>
+    </div>
+    <div class="col-span-12 lg:col-span-5 lg:pl-8 reveal">
+      <p class="text-body-lg text-ink-2 max-w-[440px]">
+        GM Carpentry &amp; Trimworks installs crown moulding, baseboards, casing, wainscoting, waffle ceilings, doors and finish carpentry for homeowners across Halton Region and nearby areas, including Mississauga. On time, tidy, and built to last.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="contact.html" class="btn btn-primary" data-track="quote">Get a free quote <span class="arrow">→</span></a>
+        <a href="portfolio.html" class="btn btn-ghost" data-track="portfolio">See recent work</a>
+      </div>
+      <div class="mt-10 grid grid-cols-3 gap-4 max-w-[440px]">
+        <div>
+          <div class="stat-num text-[28px] text-ink">5.0</div>
+          <div class="stat-caption text-ink-3 mt-1">Google<br>rating</div>
+        </div>
+        <div>
+          <div class="stat-num text-[28px] text-ink">15</div>
+          <div class="stat-caption text-ink-3 mt-1">Client<br>reviews</div>
+        </div>
+        <div>
+          <div class="stat-num text-[28px] text-ink">Halton</div>
+          <div class="stat-caption text-ink-3 mt-1">Service<br>area</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wide hero image plate -->
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="ruler mb-2"></div>
+    <div class="grid grid-cols-12 gap-gutter">
+      <figure class="col-span-12 md:col-span-8 img-frame aspect-[16/10] relative">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMJZq3zwt9kOW5NV8D4fra05pydhw60c2UBctLsXGwnvq0vd1roCpDUkwDZC58F8EbvF8s6ZoecNJ1ky4oX0RT36-xIJ5t_XLPaxwFc50OFAbvFUYNA1iE0dUz5Qn61Ker01MdI3KAaZxAy_UFEdKRrqGMeXdV9FPqceuzuujbrmGbnoqHSgrbdGCIzGFc0TS5JnFBAbYBUduMgQv15CjTXD5hLI2A-9Bb4WlpwJCh7X9-MduVFhXFnJsI9RxEhw_sccEf0kw3-00" alt="Interior trim and built-in woodwork in a Halton Region home" fetchpriority="high" decoding="async">
+        <figcaption class="caption-bar absolute left-4 bottom-4 right-4 text-cream pointer-events-none">
+          <span class="text-[11px] tracking-[0.22em] uppercase font-medium bg-surface-ink/70 px-3 py-1 backdrop-blur">Recent trim &amp; finish work</span>
+          <span class="font-sans text-[11px] tracking-[0.22em] uppercase bg-surface-ink/70 px-3 py-1 backdrop-blur">Halton Region</span>
+        </figcaption>
+      </figure>
+      <div class="col-span-12 md:col-span-4 flex flex-col gap-gutter">
+        <figure class="img-frame aspect-[4/5] flex-1">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpoDObkYkWbWQHew9vJHsAb-hzBG9FBXuQj9JxK_pEI6QXw0c0xPLHPZjDaS3V6uVCAZ4vI-jGRDj8LSnZcmXtZAYG3GJRQgkN2x1Pv_LW7h_cKOS6hHcICCf8unfpHAH9GlKuiWqxOGOD8b0N-AJwkciqXJjoRfWGD59S_exMDpzx_k76IB8EKCSXl-eU-VEM0L9gciQAOUFQgDHsh7fe30gFOFD7O-tpKrC4cF2ps64dtqfO0a8XsrTMRVUr_uxi7dkWiRtbOwg" alt="White crown moulding meeting cleanly at an inside corner" loading="lazy" decoding="async">
+        </figure>
+        <div class="bg-surface-ink text-cream p-6 md:p-7 flex flex-col justify-between gap-6 flex-1">
+          <p class="font-sans italic text-[24px] leading-[1.15]">
+            "Honest, on time, and the corners actually line up. That's what you want from a trim carpenter."
+          </p>
+          <div class="flex items-center justify-between text-[11px] tracking-[0.2em] uppercase text-cream/60">
+            <span>— What clients say</span>
+            <span class="font-sans">5.0 ★ · 15 reviews</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ruler mt-2"></div>
+  </div>
+</section>
+
+<!-- ───────── MARQUEE / DISCIPLINES ───────── -->
+<section class="border-y border-rule bg-surface-2 marquee-wrap py-6 mt-12 md:mt-20">
+  <div class="marquee text-ink-2 font-sans italic text-[28px] md:text-[40px] leading-none whitespace-nowrap">
+    <span class="flex items-center gap-14">
+      <span>Crown moulding</span><span class="text-walnut">·</span>
+      <span>Baseboards</span><span class="text-walnut">·</span>
+      <span>Casing</span><span class="text-walnut">·</span>
+      <span>Wainscoting</span><span class="text-walnut">·</span>
+      <span>Waffle ceilings</span><span class="text-walnut">·</span>
+      <span>Doors &amp; hardware</span><span class="text-walnut">·</span>
+      <span>Interior finish carpentry</span><span class="text-walnut">·</span>
+      <span>Home renovations</span><span class="text-walnut">·</span>
+    </span>
+    <span class="flex items-center gap-14" aria-hidden="true">
+      <span>Crown moulding</span><span class="text-walnut">·</span>
+      <span>Baseboards</span><span class="text-walnut">·</span>
+      <span>Casing</span><span class="text-walnut">·</span>
+      <span>Wainscoting</span><span class="text-walnut">·</span>
+      <span>Waffle ceilings</span><span class="text-walnut">·</span>
+      <span>Doors &amp; hardware</span><span class="text-walnut">·</span>
+      <span>Interior finish carpentry</span><span class="text-walnut">·</span>
+      <span>Home renovations</span><span class="text-walnut">·</span>
+    </span>
+  </div>
+</section>
+
+<!-- ───────── PHILOSOPHY ───────── -->
+<section class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl md:py-2xl" data-screen-label="Philosophy">
+  <div class="grid grid-cols-12 gap-gutter">
+    <aside class="col-span-12 lg:col-span-3">
+      <span class="eyebrow">02 · Why homeowners call</span>
+      <h2 class="mt-6 font-sans font-bold text-h2 text-ink reveal">One carpenter.<br>Your house, start to finish.</h2>
+    </aside>
+    <div class="col-span-12 lg:col-span-6 lg:col-start-5 reveal">
+      <p class="dropcap text-lead text-ink-2 mb-6">
+        GM Carpentry &amp; Trimworks provides trim and interior finishes across Halton Region and nearby areas, including Mississauga. You get the person who measures, cuts, and installs. No hand-offs, no surprises on site.
+      </p>
+      <p class="text-body-lg text-ink-2 mb-6">
+        Clients mention punctuality, attention to detail, and clean work. Whether it's one room of crown or a full trim package for a renovation, request a quote and we'll follow up during business hours.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter pt-8 border-t border-rule">
+        <article class="trust-card">
+          <span class="trust-icon material-symbols-outlined" aria-hidden="true">handshake</span>
+          <h3 class="font-sans font-semibold text-h6 text-ink">Honest and trustworthy</h3>
+          <p class="text-body-sm text-ink-2 mt-2">Clients mention Gary by name because he explains the work clearly and keeps the quote straightforward.</p>
+        </article>
+        <article class="trust-card">
+          <span class="trust-icon material-symbols-outlined" aria-hidden="true">schedule</span>
+          <h3 class="font-sans font-semibold text-h6 text-ink">On time, on budget</h3>
+          <p class="text-body-sm text-ink-2 mt-2">Reliable scheduling, practical timelines, and no surprises once the scope is agreed.</p>
+        </article>
+        <article class="trust-card">
+          <span class="trust-icon material-symbols-outlined" aria-hidden="true">cleaning_services</span>
+          <h3 class="font-sans font-semibold text-h6 text-ink">Clean work</h3>
+          <p class="text-body-sm text-ink-2 mt-2">Trim work happens inside your home, so the jobsite stays tidy and respectful.</p>
+        </article>
+        <article class="trust-card">
+          <span class="trust-icon material-symbols-outlined" aria-hidden="true">straighten</span>
+          <h3 class="font-sans font-semibold text-h6 text-ink">Detailed trim</h3>
+          <p class="text-body-sm text-ink-2 mt-2">Crown, casing, baseboards and wainscoting are fitted cleanly at corners, outlets and transitions.</p>
+        </article>
+      </div>
+    </div>
+    <figure class="col-span-12 lg:col-span-3 lg:col-start-10">
+      <div class="corners img-frame aspect-[3/4] reveal">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-xc8WfFPww4bdo7Q_q0j341yKSwZLS0U2bSxleqlcimo3iFQ4FrJTuTMnAzCw__iEJygA33m3cmfrZH-iHcK5F_Kz-Tlbcn0U-g2mGLtIjYGQUTcO7t_yILbjBHWiJ4xRzl-OdW-UbQa8jVhsniBspOF9U5kfH1q1SbLEJAxQYAPz1kNKnHRJal_R7oJqqliBMA1jSHxiqvd3srRy5HNI2sWGkQwFJ-p1xR2Ms0U3eTpe6JG9BUfEWNqFjZaz1R92XFqYMcNOYS0" alt="GM Carpentry trim carpentry tools and materials" loading="lazy" decoding="async">
+      </div>
+      <figcaption class="font-sans text-[11px] tracking-[0.22em] uppercase text-ink-2 mt-3">Oakville · Halton service area</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ───────── SERVICES ───────── -->
+<section class="bg-surface-2 border-y border-rule py-xl md:py-2xl" data-screen-label="Services">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-12 gap-gutter items-end mb-12 md:mb-16">
+      <div class="col-span-12 md:col-span-7">
+        <span class="eyebrow">03 · What we do</span>
+        <h2 class="mt-6 font-sans font-bold text-h2 text-ink">Trim work you'll<br>notice — in a good way.</h2>
+      </div>
+      <div class="col-span-12 md:col-span-4 md:col-start-9">
+        <p class="text-body-lg text-ink-2">Crown moulding, baseboards, casing, wainscoting, waffle ceilings, doors and finish carpentry — the work homeowners call GM Carpentry for most.</p>
+        <a href="services.html" class="btn-link mt-5 inline-flex cursor-pointer">All services <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-gutter">
+      <a href="services.html#molding" class="svc-card col-span-12 md:col-span-6 lg:col-span-3 card-hover">
+        <div class="flex items-center justify-between">
+          <span class="svc-num">i.</span>
+          <span class="icon-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M17 7H9"/><path d="M17 7v8"/></svg></span>
+        </div>
+        <div class="img-frame aspect-[4/3] -mx-8 -mt-2">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpoDObkYkWbWQHew9vJHsAb-hzBG9FBXuQj9JxK_pEI6QXw0c0xPLHPZjDaS3V6uVCAZ4vI-jGRDj8LSnZcmXtZAYG3GJRQgkN2x1Pv_LW7h_cKOS6hHcICCf8unfpHAH9GlKuiWqxOGOD8b0N-AJwkciqXJjoRfWGD59S_exMDpzx_k76IB8EKCSXl-eU-VEM0L9gciQAOUFQgDHsh7fe30gFOFD7O-tpKrC4cF2ps64dtqfO0a8XsrTMRVUr_uxi7dkWiRtbOwg" alt="Crown molding">
+        </div>
+        <h3 class="font-sans font-semibold text-[26px] leading-tight text-ink mt-2">Crown moulding<br>&amp; trim</h3>
+        <p class="text-body-sm text-ink-2">Crown, baseboards, casing and panel mould — installed square, caulked clean, ready to paint.</p>
+      </a>
+
+      <a href="services.html#wainscoting" class="svc-card col-span-12 md:col-span-6 lg:col-span-3 card-hover">
+        <div class="flex items-center justify-between">
+          <span class="svc-num">ii.</span>
+          <span class="icon-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M17 7H9"/><path d="M17 7v8"/></svg></span>
+        </div>
+        <div class="img-frame aspect-[4/3] -mx-8 -mt-2">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaKXCy7vRviO4E9kSplF_461TkZr4yOX1VkR4mrj5S-ryCPEqYNG4RgoZag9IX-FS7Jcn36kxAXK8vdooEBhDvh8g_Y_EVMwqYR00uqS_xrl934FQK-lFjsM0ct8s_B1L5rreroYwh8NbKPkk4kdscr6lcXeUuqkUUVLuaWKLy3B1gE8lTQWHeBamkoMQvIILUpfH2vvmrKx0-lEzcFSy35QUOs9pw2L3kv0F2eZdhA-rUOQ-wIMKh60_itcugX1Zm6sHeKIx9WIg" alt="Raised-panel wainscoting on a dark feature wall">
+        </div>
+        <h3 class="font-sans font-semibold text-[26px] leading-tight text-ink mt-2">Wainscoting<br>&amp; feature walls</h3>
+        <p class="text-body-sm text-ink-2">Raised panel, beadboard or modern grids — measured and fitted wall by wall.</p>
+      </a>
+
+      <a href="services.html#cabinetry" class="svc-card col-span-12 md:col-span-6 lg:col-span-3 card-hover">
+        <div class="flex items-center justify-between">
+          <span class="svc-num">iii.</span>
+          <span class="icon-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M17 7H9"/><path d="M17 7v8"/></svg></span>
+        </div>
+        <div class="img-frame aspect-[4/3] -mx-8 -mt-2">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMJZq3zwt9kOW5NV8D4fra05pydhw60c2UBctLsXGwnvq0vd1roCpDUkwDZC58F8EbvF8s6ZoecNJ1ky4oX0RT36-xIJ5t_XLPaxwFc50OFAbvFUYNA1iE0dUz5Qn61Ker01MdI3KAaZxAy_UFEdKRrqGMeXdV9FPqceuzuujbrmGbnoqHSgrbdGCIzGFc0TS5JnFBAbYBUduMgQv15CjTXD5hLI2A-9Bb4WlpwJCh7X9-MduVFhXFnJsI9RxEhw_sccEf0kw3-00" alt="Walnut library with integrated cabinetry">
+        </div>
+        <h3 class="font-sans font-semibold text-[26px] leading-tight text-ink mt-2">Built-ins<br>&amp; cabinetry</h3>
+        <p class="text-body-sm text-ink-2">Mudrooms, mantels, entertainment walls and storage — when your project needs more than trim.</p>
+      </a>
+
+      <a href="services.html#ceilings" class="svc-card col-span-12 md:col-span-6 lg:col-span-3 card-hover">
+        <div class="flex items-center justify-between">
+          <span class="svc-num">iv.</span>
+          <span class="icon-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M17 7H9"/><path d="M17 7v8"/></svg></span>
+        </div>
+        <div class="img-frame aspect-[4/3] -mx-8 -mt-2">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRU4yYHa0syvB1RDgiguOwZAVxaV5GdvLLYaAjhK5PLiIyS5fqUyOoK0bKc33TDRvijhK2OCbNXlFSRm1IvCLW1lF4TkmXncmWo0i1Pwdtupb7myoK30Hd3JsLVHo_z7KBJ48jQi5jKhUV6l_6YauuMhUWrCkfyBu83Tco-sfzcPndiiJUZSe_e7duKG1WxE5XPC1sBaQ7BFTnVHAlbjstLCuNcl1l33nznS2hnS_at3G2U9--8akYKSFIOahtCuDAJbnt7xgmwI0" alt="Coffered ceiling in a grand interior">
+        </div>
+        <h3 class="font-sans font-semibold text-[26px] leading-tight text-ink mt-2">Waffle &amp;<br>coffered ceilings</h3>
+        <p class="text-body-sm text-ink-2">Waffle ceilings, coffered grids and tray details — popular upgrade for dining rooms and main floors.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── TESTIMONIALS ───────── -->
+<section id="reviews" class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl md:py-2xl" data-screen-label="Reviews">
+  <div class="grid grid-cols-12 gap-gutter items-end mb-10 md:mb-14">
+    <div class="col-span-12 md:col-span-7">
+      <span class="eyebrow">04 · Google reviews</span>
+      <h2 class="mt-6 font-sans font-bold text-h2 text-ink">5.0 stars.<br>Fifteen homeowners.</h2>
+    </div>
+    <div class="col-span-12 md:col-span-4 md:col-start-9">
+      <p class="text-body-lg text-ink-2">Real feedback from Google — crown moulding, trim work, casing and baseboards are what people mention most.</p>
+    </div>
+  </div>
+  <div class="grid grid-cols-12 gap-gutter">
+    <article class="proof-card col-span-12 md:col-span-4 reveal">
+      <div class="stat-num text-[52px] text-ink">5.0</div>
+      <h3 class="font-sans font-semibold text-h5 text-ink">Google rating</h3>
+      <p class="text-body-sm text-ink-2">15 public Google reviews, with repeated mentions of honest communication, detailed work and professional scheduling.</p>
+      <a href="https://www.google.com/maps/place/GM+Carpentry+%26+Trimworks/@43.5201744,-79.7136365,9z/data=!3m1!4b1!4m6!3m5!1s0x882b6f79221e3e5f:0x56a4cfde23bf69d9!8m2!3d43.5201744!4d-79.7136365!16s%2Fg%2F11f3xwvpbv" class="btn-link mt-auto" target="_blank" rel="noopener noreferrer" data-track="reviews">Read Google reviews <span class="arrow">→</span></a>
+    </article>
+    <article class="proof-card col-span-12 md:col-span-4 reveal">
+      <div class="stat-num text-[52px] text-ink">5.0</div>
+      <h3 class="font-sans font-semibold text-h5 text-ink">HomeStars snapshot</h3>
+      <p class="text-body-sm text-ink-2">HomeStars currently shows a 5.0/10 snapshot where accessible. Live review details can be blocked by Cloudflare, so Google remains the primary public source here.</p>
+      <a href="https://homestars.com/companies/2793973-gm-carpentry" class="btn-link mt-auto" target="_blank" rel="noopener noreferrer" data-track="reviews">Check HomeStars <span class="arrow">→</span></a>
+    </article>
+    <article class="proof-card col-span-12 md:col-span-4 reveal">
+      <div class="stat-num text-[52px] text-ink">Quote</div>
+      <h3 class="font-sans font-semibold text-h5 text-ink">Request a quote</h3>
+      <p class="text-body-sm text-ink-2">Not sure if your job is crown, casing, wainscoting or a full trim package? Send photos or call GM Carpentry and we'll point you in the right direction.</p>
+      <a href="tel:+16472895306" class="btn-link mt-auto" data-track="call">Call GM Carpentry <span class="arrow">→</span></a>
+    </article>
+  </div>
+  <div class="grid grid-cols-12 gap-gutter mt-gutter">
+    <article class="testimonial-card col-span-12 md:col-span-4 reveal">
+      <blockquote>"Happy with GM Carpentry installing crown moulding. Honest and trustworthy — I'd call again."</blockquote>
+      <div>
+        <div class="review-meta font-semibold text-ink">Jason DaSilva</div>
+        <div class="review-meta mt-1">Google review</div>
+        <span class="review-tag">Crown moulding</span>
+      </div>
+    </article>
+    <article class="testimonial-card col-span-12 md:col-span-4 reveal">
+      <blockquote>"Amazing work. They didn't rush, asked questions along the way, and the detail shows."</blockquote>
+      <div>
+        <div class="review-meta font-semibold text-ink">Justyna Marciniak</div>
+        <div class="review-meta mt-1">Google review</div>
+        <span class="review-tag">Trim work</span>
+      </div>
+    </article>
+    <article class="testimonial-card col-span-12 md:col-span-4 reveal">
+      <blockquote>"GM Carpentry is truly professional — great product, solid recommendations, and reliable scheduling."</blockquote>
+      <div>
+        <div class="review-meta font-semibold text-ink">ro adi</div>
+        <div class="review-meta mt-1">Google review</div>
+        <span class="review-tag">Finish carpentry</span>
+      </div>
+    </article>
+  </div>
+  <div class="mt-10 flex flex-wrap items-center gap-4">
+    <a href="https://www.google.com/maps/place/GM+Carpentry+%26+Trimworks/@43.5201744,-79.7136365,9z/data=!3m1!4b1!4m6!3m5!1s0x882b6f79221e3e5f:0x56a4cfde23bf69d9!8m2!3d43.5201744!4d-79.7136365!16s%2Fg%2F11f3xwvpbv" class="btn btn-ghost" target="_blank" rel="noopener noreferrer" data-track="reviews">Read all 15 reviews on Google</a>
+    <a href="contact.html" class="btn btn-primary" data-track="quote">Get a free quote <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<!-- ───────── SERVICE AREA ───────── -->
+<section class="bg-surface-2 border-y border-rule py-xl" data-screen-label="Service Area">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-12 gap-gutter items-center">
+      <div class="col-span-12 lg:col-span-5">
+        <span class="eyebrow">05 · Service area</span>
+        <h2 class="mt-6 font-sans font-bold text-h2 text-ink">Trim work across Halton and nearby areas.</h2>
+      </div>
+      <div class="col-span-12 lg:col-span-6 lg:col-start-7">
+        <p class="text-body-lg text-ink-2">Gary regularly works across Halton Region and nearby areas, including Mississauga. Oakville, Burlington, Milton, Georgetown, Halton Hills and Mississauga are all within the regular service area; if you are just outside the list, send the address and scope.</p>
+        <div class="mt-7 flex flex-wrap gap-3" aria-label="Service area cities">
+          <span class="city-chip">Oakville</span>
+          <span class="city-chip">Burlington</span>
+          <span class="city-chip">Milton</span>
+          <span class="city-chip">Georgetown</span>
+          <span class="city-chip">Halton Hills</span>
+          <span class="city-chip">Mississauga</span>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="contact.html" class="btn btn-primary" data-track="quote">Ask about your city <span class="arrow">→</span></a>
+          <a href="tel:+16472895306" class="btn btn-ghost" data-track="call">Call Gary</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── FEATURED PORTFOLIO ───────── -->
+<section class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl md:py-2xl" data-screen-label="Featured Work">
+  <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 sm:gap-md mb-10 md:mb-14">
+    <div>
+      <span class="eyebrow">06 · Recent work</span>
+      <h2 class="mt-6 font-sans font-bold text-h2 text-ink">Photos from Halton-area projects.</h2>
+      <p class="text-body-sm text-ink-2 mt-3 max-w-md">Sample imagery — ask GM Carpentry for photos from work similar to yours.</p>
+    </div>
+    <a href="portfolio.html" class="btn-link self-end cursor-pointer">See more work <span class="arrow">→</span></a>
+  </div>
+
+  <div class="grid grid-cols-12 gap-gutter">
+    <!-- Big lead -->
+    <a href="portfolio.html" class="col-span-12 lg:col-span-8 group">
+      <figure class="img-frame aspect-[16/10]">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA16_1wDG2nxt4bVZoz5YQaU15XOdcWQb8WT0aLIOqplPZ_sB2La_OysikchlnQHQe0e6QSbJfsgOfipD127R64nFR-Ho8KvxvNDVx0Z8w2JKZfFdRNjQqG3dpEUpwusaBBHRojzinNwQRiroeqhQ6At05LGeuTRWmKHHThSQYsNCs8IZkx9p57_ITNMQFncbdAAf58-nAjoMrvmt0xtno1mAg_QLKIbe3E9LVT1LelmQ1q1Z4HY_wgmA5dJn9qN_lDy0bAtiR-_uA" alt="Heritage living room with floor-to-ceiling wainscoting and layered crown molding in charcoal">
+      </figure>
+      <div class="mt-4 meta-row">
+        <div>
+          <div class="text-[11px] tracking-[0.22em] uppercase text-walnut">Wainscoting &amp; crown</div>
+          <h3 class="font-sans font-semibold text-h4 text-ink mt-1">Living room trim package</h3>
+          <p class="text-body-sm text-ink-2 mt-1 max-w-md">Raised panel wainscoting with layered crown — typical whole-room finish work.</p>
+        </div>
+        <div class="meta-aside shrink-0">
+          <div class="font-sans text-[11px] tracking-[0.22em] uppercase text-ink-2">Halton · Trim &amp; panel</div>
+        </div>
+      </div>
+    </a>
+    <a href="portfolio.html" class="col-span-12 lg:col-span-4 group">
+      <figure class="img-frame aspect-[3/4]">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTLXIItmHGOqmrjSXztOc8C3-yT5RB3Irth9zgNNuJAgxDBeVQTnACZr0jIpu1-fPrJMS6mB1SRIhftFrd1PYJcCaVJadQTTnBUyjpfx6gD-PNtkO6h2DQBdP-9ki_-xWv90Q00f6Oj5xItkXK0X9vQqUalr_aVI4bwtPd7VL3kf6OjRp5nkluNWkIQgj2gtFleb_UwF-9I4NjY9QdxbLdafxZ_HgwxHcniPC56uAVV8zNWkCyonaOXFvVwkIk_Fu7OOwdJRgZD4g" alt="Walnut library study with integrated lighting">
+      </figure>
+      <div class="mt-4 meta-row">
+        <div>
+          <div class="text-[11px] tracking-[0.22em] uppercase text-walnut">Built-ins</div>
+          <h3 class="font-sans font-semibold text-h4 text-ink mt-1">Study &amp; shelving</h3>
+        </div>
+        <div class="meta-aside shrink-0">
+          <div class="font-sans text-[11px] tracking-[0.22em] uppercase text-ink-2">Halton · Wood trim</div>
+        </div>
+      </div>
+    </a>
+
+    <a href="portfolio.html" class="col-span-12 md:col-span-4 group">
+      <figure class="img-frame aspect-[4/5]">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOTkJLgorbegZZnla4BWHRRyZ7nDCgnBeTLtDF0Sw4OwwSqKe4rP1g736IQMwUHqdimZDGd4YiPWalec1fNK4Xwd1N4wRgbcYcT9Jvapfc8gvqKrmx3At0QXnCLqV5qVAddlJlm63OwHHKtR-ZmD28kEzONnuM3iGtAAm13hirkurDfkJQzFVS1EY76ynUjJu3FhAR6-oghRx6kfN_wgbye7okvyLUj4G2b3jioLZDz1PsCsvOgHfkmwmkTANQg4SVPHlp7khBElc" alt="Modern hallway with crisp white architectural trim">
+      </figure>
+      <div class="mt-4">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut">Trim package</div>
+        <h3 class="font-sans font-semibold text-h5 text-ink mt-1">Hallway &amp; doors</h3>
+      </div>
+    </a>
+    <a href="portfolio.html" class="col-span-12 md:col-span-4 group">
+      <figure class="img-frame aspect-[4/5]">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8Q-uUTPFOeJv1-Nox4VOIqMzFB9vYIHWHJQMF-IaMSgcvaGM2yCNy6xBWdcCoaNoq4eFCoWXXbJCSiYkxsee4XKV7sZIvwd2vl9aTlhA_7s81SfcHXmR12Gx8lZcrpV6spJ7TBZSzv49htJ4Hd4vdzmQ-QxT3X9ph7KWLBJlyokT-FiViH4Tni2r4GF3RT8UMHCzzcRQdcFF-0meHm7ddw1C1oIgm3giZ3InHXPlP9qB41v428TGYoMLvEMvoW9-HaRuJunPMbs" alt="Routing detail on solid walnut kitchen island">
+      </figure>
+      <div class="mt-4">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut">Kitchen detail</div>
+        <h3 class="font-sans font-semibold text-h5 text-ink mt-1">Island &amp; millwork</h3>
+      </div>
+    </a>
+    <a href="portfolio.html" class="col-span-12 md:col-span-4 group">
+      <figure class="img-frame aspect-[4/5]">
+        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYKrspo7xhCCNRy6F4J_3BAtFas7wfWpIo66DCyStf3x91aL3T1YFnx9tXyXPcYbgJCJKMRM7CvlM3A4MDQgLo4nui2PB_pcL86G-QkuoDCSIGi49SB_6aFZkYL-5fOrkBtXh_JQK2OiGjtu5AZAd5y44VVjIAooq0LTvet5yFt6ofxsvzgosdn3V-6BRv9xdYGaQTbyd6GTqGSIN59sgWSTxEzbgmZ7EFOezWIqtyMjGfwpuoOXG837XHa8xQ-EYxetqPTIkC-Xk" alt="Geometric coffered ceiling in dining room">
+      </figure>
+      <div class="mt-4">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut">Ceiling</div>
+        <h3 class="font-sans font-semibold text-h5 text-ink mt-1">Coffered dining room</h3>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ───────── PROCESS ───────── -->
+<section id="process" class="bg-surface-ink text-cream py-xl md:py-2xl" data-screen-label="Process">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-12 gap-gutter mb-14 md:mb-20">
+      <div class="col-span-12 lg:col-span-5">
+        <span class="eyebrow" style="color:#e9bf91;">07 · How it works</span>
+        <h2 class="mt-6 font-sans font-bold text-h2 text-cream">Simple steps.<br>No runaround.</h2>
+      </div>
+      <div class="col-span-12 lg:col-span-5 lg:col-start-8 self-end">
+        <p class="text-body-lg text-cream/80">You call or send a message, we look at the space, agree on scope and price, then GM Carpentry installs. Most single-room trim jobs are a few days to a couple of weeks depending on detail.</p>
+      </div>
+    </div>
+
+    <ol class="grid grid-cols-12 gap-gutter">
+      <li class="col-span-12 md:col-span-6 lg:col-span-3 border-t border-cream/15 pt-6">
+        <div class="flex items-baseline justify-between">
+          <span class="numeral text-[40px]" style="color:#e9bf91;">i.</span>
+          <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-cream/50">Step 1</span>
+        </div>
+        <h3 class="font-sans font-semibold text-h5 text-cream mt-3">Call or<br>message</h3>
+        <p class="text-body-sm text-cream/70 mt-3">Tell us what room, what you want installed, and your timeline. Photos help — we'll follow up quickly.</p>
+      </li>
+      <li class="col-span-12 md:col-span-6 lg:col-span-3 border-t border-cream/15 pt-6">
+        <div class="flex items-baseline justify-between">
+          <span class="numeral text-[40px]" style="color:#e9bf91;">ii.</span>
+          <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-cream/50">Step 2</span>
+        </div>
+        <h3 class="font-sans font-semibold text-h5 text-cream mt-3">Site visit<br>&amp; quote</h3>
+        <p class="text-body-sm text-cream/70 mt-3">GM Carpentry measures on site, confirms profiles and materials, and gives you a clear written quote before work starts.</p>
+      </li>
+      <li class="col-span-12 md:col-span-6 lg:col-span-3 border-t border-cream/15 pt-6">
+        <div class="flex items-baseline justify-between">
+          <span class="numeral text-[40px]" style="color:#e9bf91;">iii.</span>
+          <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-cream/50">Step 3</span>
+        </div>
+        <h3 class="font-sans font-semibold text-h5 text-cream mt-3">Prep &amp;<br>materials</h3>
+        <p class="text-body-sm text-cream/70 mt-3">Stock is ordered and cut for your job. Built-up crown and custom details are assembled before install day.</p>
+      </li>
+      <li class="col-span-12 md:col-span-6 lg:col-span-3 border-t border-cream/15 pt-6">
+        <div class="flex items-baseline justify-between">
+          <span class="numeral text-[40px]" style="color:#e9bf91;">iv.</span>
+          <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-cream/50">Step 4</span>
+        </div>
+        <h3 class="font-sans font-semibold text-h5 text-cream mt-3">Install &amp;<br>walkthrough</h3>
+        <p class="text-body-sm text-cream/70 mt-3">GM Carpentry installs on site, keeps the area tidy, and walks you through the finished work before you pay the balance.</p>
+      </li>
+    </ol>
+
+    <div class="mt-14 md:mt-20 grid grid-cols-12 gap-gutter items-center">
+      <div class="col-span-12 lg:col-span-4 border-l-2 border-walnut pl-6">
+        <p class="font-sans italic text-[28px] leading-[1.2] text-cream">"You deal with the carpenter who does the work — that's how it should be."</p>
+        <div class="mt-5 text-[11px] tracking-[0.22em] uppercase text-cream/60">— GM Carpentry</div>
+      </div>
+      <div class="col-span-12 lg:col-span-7 lg:col-start-6">
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-gutter">
+          <div class="border-t border-cream/15 pt-5">
+            <div class="stat-num text-[40px] text-cream">5.0</div>
+            <div class="stat-caption text-cream/60 mt-2">Google rating</div>
+          </div>
+          <div class="border-t border-cream/15 pt-5">
+            <div class="stat-num text-[40px] text-cream">15</div>
+            <div class="stat-caption text-cream/60 mt-2">Google reviews</div>
+          </div>
+          <div class="border-t border-cream/15 pt-5">
+            <div class="stat-num text-[40px] text-cream">Quote</div>
+            <div class="stat-caption text-cream/60 mt-2">clear follow-up</div>
+          </div>
+          <div class="border-t border-cream/15 pt-5">
+            <div class="stat-num text-[40px] text-cream">Halton</div>
+            <div class="stat-caption text-cream/60 mt-2">service area</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── MATERIALS ───────── -->
+<section id="materials" class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl md:py-2xl" data-screen-label="Materials">
+  <div class="grid grid-cols-12 gap-gutter">
+    <div class="col-span-12 lg:col-span-4">
+      <span class="eyebrow">08 · Materials</span>
+      <h2 class="mt-6 font-sans font-bold text-h2 text-ink">Quality wood<br>that holds up.</h2>
+      <p class="text-body-lg text-ink-2 mt-6">
+        For trim that gets bumped, painted and lived with, solid wood and quality primed stock outperform cheap MDF every time. We'll recommend the right material for your room and budget — no upsell, just what fits the job.
+      </p>
+      <a href="services.html" class="btn-link mt-6 inline-flex cursor-pointer">See services <span class="arrow">→</span></a>
+    </div>
+
+    <div class="col-span-12 lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-gutter">
+      <!-- Solid hardwood -->
+      <div class="border border-rule p-7 bg-cream">
+        <div class="flex items-center justify-between mb-5">
+          <div class="text-[11px] tracking-[0.22em] uppercase text-walnut">Specified</div>
+          <div class="numeral text-[16px]">A</div>
+        </div>
+        <h3 class="font-sans font-semibold text-h4 text-ink">Solid Hardwood</h3>
+        <p class="text-body-sm text-ink-3 mt-2">Poplar, white oak, walnut, sapele, hard maple. Kiln-dried and acclimatised before milling.</p>
+        <div class="mt-6">
+          <div class="spec-row"><span class="k">Hygroscopic stability</span><span class="v">Excellent</span></div>
+          <div class="spec-row"><span class="k">Edge retention</span><span class="v">Crisp · holds detail</span></div>
+          <div class="spec-row"><span class="k">Fastener withdrawal</span><span class="v">High</span></div>
+          <div class="spec-row"><span class="k">Refinishable</span><span class="v">Sand &amp; refinish, repeatedly</span></div>
+          <div class="spec-row"><span class="k">Service life</span><span class="v">50+ years</span></div>
+        </div>
+      </div>
+
+      <!-- MDF -->
+      <div class="border border-rule p-7 bg-surface-3 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none opacity-[0.04]" style="background-image: repeating-linear-gradient(45deg, var(--ink) 0 1px, transparent 1px 8px);"></div>
+        <div class="flex items-center justify-between mb-5 relative">
+          <div class="text-[11px] tracking-[0.22em] uppercase text-ink-3">Not specified</div>
+          <div class="numeral text-[16px] text-ink-3">B</div>
+        </div>
+        <h3 class="font-sans font-semibold text-h4 text-ink-2 relative">Medium-density fibreboard</h3>
+        <p class="text-body-sm text-ink-3 mt-2 relative">A composite of resin-bonded wood fibres. Common substitute for solid lumber on lower-tier trim work.</p>
+        <div class="mt-6 relative">
+          <div class="spec-row"><span class="k">Hygroscopic stability</span><span class="v" style="color:#b13c2a;">Poor — swells</span></div>
+          <div class="spec-row"><span class="k">Edge retention</span><span class="v" style="color:#b13c2a;">Blunts at corners</span></div>
+          <div class="spec-row"><span class="k">Fastener withdrawal</span><span class="v" style="color:#b13c2a;">Low</span></div>
+          <div class="spec-row"><span class="k">Refinishable</span><span class="v" style="color:#b13c2a;">One coat, perhaps</span></div>
+          <div class="spec-row"><span class="k">Service life</span><span class="v" style="color:#b13c2a;">10–15 years, painted</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── TESTIMONIAL + CTA ───────── -->
+<section class="relative overflow-hidden" data-screen-label="Closing">
+  <div class="absolute inset-0">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1bZ38kOTImGLt_AvloX7Y2SMd1sEKMJY18X3p9Zf5O2mkEXYDnbu4yhGnA9MxdgkbFT2dr8mx556brm7fsdzpUicqTPA2_m3RE7gFvlV855LC5xIaUa65n-vAlt9nI5fFr8fUgXNKHYfexhF0vpMUvlO_iJRoS8DVARMBjv02y9N4_u7Lv2-yBb0GSifr6SrpWrrzfyOUwKac20blA9cKv2ojKpP5Hg7wjxzduDI2yR35RQ9a9mxC3EtbFRArESiVBf9736wYdls" class="w-full h-full object-cover" alt="">
+    <div class="absolute inset-0 bg-surface-ink/80 mix-blend-multiply"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-surface-ink/40 to-surface-ink/95"></div>
+  </div>
+  <div class="relative max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl md:py-2xl">
+    <div class="grid grid-cols-12 gap-gutter">
+      <div class="col-span-12 lg:col-span-7">
+        <span class="eyebrow" style="color:#e9bf91;">09 · Ready when you are</span>
+        <blockquote class="mt-8 font-sans font-bold text-[36px] md:text-[52px] leading-[1.05] text-cream tracking-[-0.015em]">
+          <span class="text-walnut-tint">"</span>Amazing work — detailed, didn't rush, and asked the right questions along the way.<span class="text-walnut-tint">"</span>
+        </blockquote>
+        <div class="mt-8 flex items-center gap-6">
+          <div class="w-12 h-12 rounded-full bg-walnut/30 flex items-center justify-center font-sans font-semibold italic text-cream text-[20px]">JM</div>
+          <div>
+            <div class="text-cream font-semibold">Justyna Marciniak</div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-cream/60 mt-1">Google review · Trim work</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-span-12 lg:col-span-4 lg:col-start-9">
+        <div class="border border-cream/15 p-8 bg-cream/[0.04] backdrop-blur">
+          <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint">Free quote</div>
+          <h3 class="font-sans font-bold text-[40px] leading-[1.05] text-cream mt-3">Call GM Carpentry<br>today.</h3>
+          <p class="text-body-sm text-cream/70 mt-4">Request a quote and we'll follow up during business hours. Serving Halton Region and nearby areas, including Mississauga.</p>
+          <a href="contact.html" class="btn btn-walnut w-full justify-between mt-7" data-track="quote">
+            <span>Get a free quote</span>
+            <span class="arrow">→</span>
+          </a>
+          <a href="tel:+16472895306" class="btn btn-cream w-full justify-center mt-3" data-track="call">(647) 289-5306</a>
+          <div class="mt-6 grid gap-3">
+            <div class="next-step-card">
+              <div class="step-no">Step 1</div>
+              <p class="text-body-sm text-cream/75 mt-2">Send your city, rooms, and a few photos if you have them.</p>
+            </div>
+            <div class="next-step-card">
+              <div class="step-no">Step 2</div>
+              <p class="text-body-sm text-cream/75 mt-2">Gary confirms the scope, timing, and whether a site visit makes sense.</p>
+            </div>
+            <div class="next-step-card">
+              <div class="step-no">Step 3</div>
+              <p class="text-body-sm text-cream/75 mt-2">You get a clear quote before any trim work starts.</p>
+            </div>
+          </div>
+          <div class="mt-7 pt-7 border-t border-cream/15 grid grid-cols-2 gap-4 text-[11px] tracking-[0.18em] uppercase">
+            <div>
+              <div class="text-cream/50">Call</div>
+              <a href="tel:+16472895306" class="text-cream block mt-1 normal-case tracking-normal font-mono text-[13px]" data-track="call">(647) 289-5306</a>
+            </div>
+            <div>
+              <div class="text-cream/50">Write</div>
+              <a href="mailto:studio@gmcarpentry.ca" class="text-cream block mt-1 normal-case tracking-normal font-mono text-[13px]">studio@<br>gmcarpentry.ca</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ───────── FOOTER ───────── -->
+<footer class="bg-surface-ink text-cream pt-xl pb-8" data-screen-label="Footer">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-12 gap-gutter pb-12 md:pb-16 border-b border-cream/15">
+      <!-- Brand block -->
+      <div class="col-span-12 md:col-span-5">
+        <span class="inline-flex bg-white p-2">
+          <img src="logo.png" class="h-12 w-auto pointer-events-none" alt="GM Carpentry">
+        </span>
+        <p class="mt-6 text-cream/70 max-w-sm text-body">Crown moulding, trim and interior finishes across Halton Region and nearby areas, including Mississauga. Oakville-based, 5.0 on Google, and ready to quote your project.</p>
+        <div class="mt-8 flex gap-3">
+          <a href="https://www.instagram.com/gmcarpentrytrim/" class="w-10 h-10 border border-cream/20 hover:border-walnut-3 transition-colors inline-flex items-center justify-center text-cream/80 hover:text-walnut-tint" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+          </a>
+          <a href="https://www.facebook.com/gmcarpentry5/" class="w-10 h-10 border border-cream/20 hover:border-walnut-3 transition-colors inline-flex items-center justify-center text-cream/80 hover:text-walnut-tint" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V7.2c0-.7.5-1.2 1.2-1.2H17V3h-2.4C12.8 3 11 4.8 11 7.2V8.5H9v3h2V21h3v-9.5h2.6l.4-3H14z"/></svg>
+          </a>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=GM+Carpentry+%26+Trimworks" class="w-10 h-10 border border-cream/20 hover:border-walnut-3 transition-colors inline-flex items-center justify-center text-cream/80 hover:text-walnut-tint" aria-label="Google Maps" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-4.5 7-11a7 7 0 1 0-14 0c0 6.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </a>
+        </div>
+        <div class="mt-5 text-[11px] tracking-[0.18em] uppercase text-cream/50">5.0 ★ Google · 15 reviews · 5.0 Facebook</div>
+      </div>
+      <!-- Sitemap -->
+      <div class="col-span-6 md:col-span-2">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Site</div>
+        <ul class="space-y-3 text-body-sm text-cream/80">
+          <li><a href="index.html" class="hover:text-walnut-tint transition-colors">Home</a></li>
+          <li><a href="portfolio.html" class="hover:text-walnut-tint transition-colors">Portfolio</a></li>
+          <li><a href="services.html" class="hover:text-walnut-tint transition-colors">Services</a></li>
+          <li><a href="#process" class="hover:text-walnut-tint transition-colors">Process</a></li>
+          <li><a href="#materials" class="hover:text-walnut-tint transition-colors">Materials</a></li>
+          <li><a href="contact.html" class="hover:text-walnut-tint transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-span-6 md:col-span-2">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Disciplines</div>
+        <ul class="space-y-3 text-body-sm text-cream/80">
+          <li><a href="services.html#molding" class="hover:text-walnut-tint transition-colors">Moulding &amp; Trim</a></li>
+          <li><a href="services.html#wainscoting" class="hover:text-walnut-tint transition-colors">Wainscoting</a></li>
+          <li><a href="services.html#cabinetry" class="hover:text-walnut-tint transition-colors">Cabinetry</a></li>
+          <li><a href="services.html#ceilings" class="hover:text-walnut-tint transition-colors">Ceiling Treatments</a></li>
+          <li><a href="services.html" class="hover:text-walnut-tint transition-colors">Mantels &amp; Surrounds</a></li>
+          <li><a href="services.html" class="hover:text-walnut-tint transition-colors">Hidden Doors</a></li>
+        </ul>
+      </div>
+      <div class="col-span-12 md:col-span-3">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Reach us</div>
+        <address class="not-italic text-body-sm text-cream/80 space-y-2 leading-[1.7]">
+          <div class="font-medium text-cream">Service area</div>
+          <div>Oakville, ON — Halton Region<br><span class="text-cream/60">Oakville · Burlington · Milton · Georgetown · Halton Hills · Mississauga</span></div>
+          <div class="pt-2">
+            <a href="tel:+16472895306" class="hover:text-walnut-tint">(647) 289-5306</a><br>
+            <a href="mailto:studio@gmcarpentry.ca" class="hover:text-walnut-tint">studio@gmcarpentry.ca</a>
+          </div>
+          <div class="pt-3 text-[12px] text-cream/60">
+            We respond during business hours
+          </div>
+          <div class="pt-2">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=GM+Carpentry+%26+Trimworks" class="hover:text-walnut-tint text-[12px] tracking-[0.14em] uppercase" target="_blank" rel="noopener noreferrer">Google Maps →</a>
+          </div>
+        </address>
+      </div>
+    </div>
+
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-7 text-[11px] tracking-[0.18em] uppercase text-cream/50">
+      <div>© <span data-year>2024</span> GM Carpentry &amp; Trimworks · Oakville, ON</div>
+      <div class="flex items-center gap-6">
+        <span>Oakville · Burlington · Milton · Georgetown · Halton Hills · Mississauga</span>
+        <a href="#" class="hover:text-walnut-tint">Privacy</a>
+        <a href="#" class="hover:text-walnut-tint">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

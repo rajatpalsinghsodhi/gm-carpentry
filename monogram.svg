@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="GM monogram">
+  <g stroke="currentColor" stroke-width="1.2" fill="none">
+    <path d="M2 2 L16 2 M2 2 L2 16"></path>
+    <path d="M62 2 L48 2 M62 2 L62 16"></path>
+    <path d="M2 62 L16 62 M2 62 L2 48"></path>
+    <path d="M62 62 L48 62 M62 62 L62 48"></path>
+  </g>
+  <text x="32" y="44" text-anchor="middle" font-family="&#39;Playfair Display&#39;, Georgia, serif" font-weight="700" font-style="italic" font-size="34" fill="currentColor">GM</text>
+</svg>

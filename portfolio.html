@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio · GM Carpentry &amp; Trimworks</title>
+<meta name="description" content="Selected trim and interior finish projects across Halton Region and nearby areas, including Mississauga.">
+
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script src="tw-config.js"></script>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="chatbot.css">
+
+<style>
+  .masonry { column-count: 1; column-gap: 16px; }
+  @media (min-width: 640px)  { .masonry { column-gap: 20px; } }
+  @media (min-width: 700px)  { .masonry { column-count: 2; column-gap: 24px; } }
+  @media (min-width: 1100px) { .masonry { column-count: 3; } }
+  .masonry > article { break-inside: avoid; margin-bottom: 24px; display: block; }
+  .filter-chip.active { color: var(--ink); border-color: var(--walnut); }
+  .filter-chip.active::before { background: var(--walnut); }
+
+  .lightbox-img { max-width: min(92vw, 1280px); max-height: 82vh; }
+</style>
+</head>
+<body class="bg-surface text-ink font-sans">
+
+<!-- ───────── UTILITY BAR ───────── -->
+<div class="bg-surface-ink text-cream/80 text-[12px] tracking-[0.18em] uppercase">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-9">
+    <div class="hidden md:flex items-center gap-6">
+      <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-walnut-3"></span>Request a free quote</span>
+      <span class="opacity-50">Oakville · Halton · Mississauga</span>
+    </div>
+    <div class="flex items-center gap-5 ml-auto">
+      <a href="tel:+16472895306" class="hover:text-walnut-tint transition-colors" data-track="call">(647) 289&nbsp;5306</a>
+      <span class="opacity-30 hidden md:inline">/</span>
+      <a href="mailto:studio@gmcarpentry.ca" class="hidden md:inline hover:text-walnut-tint transition-colors">studio@gmcarpentry.ca</a>
+    </div>
+  </div>
+</div>
+
+<!-- ───────── HEADER ───────── -->
+<header data-header class="sticky top-0 z-40 bg-surface/90 backdrop-blur border-b border-rule transition-all">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-[76px]">
+    <a href="index.html" class="flex items-center gap-3 text-ink" aria-label="GM Carpentry — Home">
+      <img src="logo.png" class="h-10 w-auto pointer-events-none" alt="GM Carpentry">
+    </a>
+    <nav class="hidden lg:flex items-center gap-9">
+      <a href="index.html"     class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Home</a>
+      <a href="portfolio.html" class="text-[13px] uppercase tracking-[0.18em] font-semibold text-walnut border-b border-walnut pb-1">Portfolio</a>
+      <a href="services.html"  class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Services</a>
+      <a href="index.html#process"   class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Process</a>
+      <a href="index.html#materials" class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Materials</a>
+      <a href="contact.html"   class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="btn btn-primary hidden md:inline-flex" data-track="quote">Get a free quote <span class="arrow">→</span></a>
+      <button class="lg:hidden text-ink menu-btn -mr-2" data-mobile-toggle aria-label="Open menu">
+        <span class="material-symbols-outlined" style="font-size:28px;">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<aside class="mobile-menu fixed inset-0 z-50 bg-surface flex flex-col" data-mobile-menu>
+  <div class="flex items-center justify-between h-[76px] px-margin-mobile border-b border-rule">
+    <img src="logo.png" class="h-10 w-auto pointer-events-none" alt="GM Carpentry">
+    <button data-mobile-close class="menu-btn -mr-2" aria-label="Close menu"><span class="material-symbols-outlined" style="font-size:28px;">close</span></button>
+  </div>
+  <nav class="flex flex-col gap-1 p-margin-mobile">
+    <a href="index.html"     class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Home</a>
+    <a href="portfolio.html" class="py-4 border-b border-rule font-sans font-bold text-h4 text-walnut">Portfolio</a>
+    <a href="services.html"  class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Services</a>
+    <a href="index.html#process"   class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Process</a>
+    <a href="index.html#materials" class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Materials</a>
+    <a href="contact.html"   class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Contact</a>
+    <a href="contact.html" class="btn btn-primary mt-6 self-start" data-track="quote">Get a free quote →</a>
+  </nav>
+</aside>
+
+<main>
+
+<!-- ───────── HEADER ───────── -->
+<section class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop pt-10 md:pt-16 pb-lg">
+  <div class="flex items-center justify-between mb-10 md:mb-12">
+    <span class="badge-arch"><span class="numeral text-[14px] leading-none">II</span>&nbsp;Recent work</span>
+    <a href="index.html" class="text-[11px] tracking-[0.22em] uppercase text-ink-3 hover:text-walnut transition-colors">← Return</a>
+  </div>
+
+  <div class="grid grid-cols-12 gap-gutter items-end">
+    <div class="col-span-12 lg:col-span-7">
+      <h1 class="hero-title font-sans font-bold text-[44px] sm:text-[60px] md:text-[88px] leading-[0.98] tracking-[-0.025em] text-ink">
+        Photos from<br><span class="text-walnut">Halton-area projects.</span>
+      </h1>
+    </div>
+    <div class="col-span-12 lg:col-span-4 lg:col-start-9">
+      <p class="text-body-lg text-ink-2">Sample imagery of trim, wainscoting and ceiling work across Halton Region and nearby areas, including Mississauga. Ask GM Carpentry for photos closer to your project type.</p>
+    </div>
+  </div>
+  <div class="ruler mt-10"></div>
+</section>
+
+<!-- ───────── FILTERS ───────── -->
+<section class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop pb-lg">
+  <div class="flex flex-wrap items-center justify-between gap-md py-5 border-b border-rule">
+    <div class="flex flex-wrap items-center gap-1" role="tablist">
+      <button class="filter-chip active text-[12px] uppercase tracking-[0.18em] font-semibold py-3 px-4 border-b border-transparent transition-all" data-filter="all">All <span class="text-ink-3 ml-1 font-mono normal-case tracking-normal">·5</span></button>
+      <button class="filter-chip text-[12px] uppercase tracking-[0.18em] font-semibold py-3 px-4 border-b border-transparent text-ink-3 hover:text-walnut transition-all" data-filter="moulding">Moulding</button>
+      <button class="filter-chip text-[12px] uppercase tracking-[0.18em] font-semibold py-3 px-4 border-b border-transparent text-ink-3 hover:text-walnut transition-all" data-filter="wainscoting">Wainscoting</button>
+      <button class="filter-chip text-[12px] uppercase tracking-[0.18em] font-semibold py-3 px-4 border-b border-transparent text-ink-3 hover:text-walnut transition-all" data-filter="cabinetry">Cabinetry</button>
+      <button class="filter-chip text-[12px] uppercase tracking-[0.18em] font-semibold py-3 px-4 border-b border-transparent text-ink-3 hover:text-walnut transition-all" data-filter="ceilings">Ceilings</button>
+    </div>
+    <div class="font-sans text-[11px] tracking-[0.22em] uppercase text-ink-3">
+      <span data-count>5</span> shown
+    </div>
+  </div>
+</section>
+
+<!-- ───────── MASONRY ───────── -->
+<section class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop pb-xl">
+  <div class="masonry" id="grid">
+
+    <article data-tags="wainscoting moulding" data-title="Heritage Living Room" data-loc="Glen Abbey · 2024" data-no="037">
+      <button class="block w-full text-left group" data-lightbox="https://lh3.googleusercontent.com/aida-public/AB6AXuA16_1wDG2nxt4bVZoz5YQaU15XOdcWQb8WT0aLIOqplPZ_sB2La_OysikchlnQHQe0e6QSbJfsgOfipD127R64nFR-Ho8KvxvNDVx0Z8w2JKZfFdRNjQqG3dpEUpwusaBBHRojzinNwQRiroeqhQ6At05LGeuTRWmKHHThSQYsNCs8IZkx9p57_ITNMQFncbdAAf58-nAjoMrvmt0xtno1mAg_QLKIbe3E9LVT1LelmQ1q1Z4HY_wgmA5dJn9qN_lDy0bAtiR-_uA">
+        <figure class="img-frame aspect-[4/5]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA16_1wDG2nxt4bVZoz5YQaU15XOdcWQb8WT0aLIOqplPZ_sB2La_OysikchlnQHQe0e6QSbJfsgOfipD127R64nFR-Ho8KvxvNDVx0Z8w2JKZfFdRNjQqG3dpEUpwusaBBHRojzinNwQRiroeqhQ6At05LGeuTRWmKHHThSQYsNCs8IZkx9p57_ITNMQFncbdAAf58-nAjoMrvmt0xtno1mAg_QLKIbe3E9LVT1LelmQ1q1Z4HY_wgmA5dJn9qN_lDy0bAtiR-_uA" alt="Heritage Living Room — Wainscoting & Crown">
+        </figure>
+        <div class="mt-3 meta-row">
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-walnut font-mono">037 · Wainscoting</div>
+            <h3 class="font-sans font-semibold text-h5 text-ink mt-1 group-hover:text-walnut transition-colors">Heritage Living Room</h3>
+          </div>
+          <div class="meta-aside shrink-0">Glen&nbsp;Abbey<br>2024</div>
+        </div>
+      </button>
+    </article>
+
+    <article data-tags="cabinetry ceilings" data-title="Walnut Library Study" data-loc="Morrison · 2024" data-no="041">
+      <button class="block w-full text-left group" data-lightbox="https://lh3.googleusercontent.com/aida-public/AB6AXuBTLXIItmHGOqmrjSXztOc8C3-yT5RB3Irth9zgNNuJAgxDBeVQTnACZr0jIpu1-fPrJMS6mB1SRIhftFrd1PYJcCaVJadQTTnBUyjpfx6gD-PNtkO6h2DQBdP-9ki_-xWv90Q00f6Oj5xItkXK0X9vQqUalr_aVI4bwtPd7VL3kf6OjRp5nkluNWkIQgj2gtFleb_UwF-9I4NjY9QdxbLdafxZ_HgwxHcniPC56uAVV8zNWkCyonaOXFvVwkIk_Fu7OOwdJRgZD4g">
+        <figure class="img-frame aspect-[3/4]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTLXIItmHGOqmrjSXztOc8C3-yT5RB3Irth9zgNNuJAgxDBeVQTnACZr0jIpu1-fPrJMS6mB1SRIhftFrd1PYJcCaVJadQTTnBUyjpfx6gD-PNtkO6h2DQBdP-9ki_-xWv90Q00f6Oj5xItkXK0X9vQqUalr_aVI4bwtPd7VL3kf6OjRp5nkluNWkIQgj2gtFleb_UwF-9I4NjY9QdxbLdafxZ_HgwxHcniPC56uAVV8zNWkCyonaOXFvVwkIk_Fu7OOwdJRgZD4g" alt="Walnut Library Study">
+        </figure>
+        <div class="mt-3 meta-row">
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-walnut font-mono">041 · Library</div>
+            <h3 class="font-sans font-semibold text-h5 text-ink mt-1 group-hover:text-walnut transition-colors">Walnut Library Study</h3>
+          </div>
+          <div class="meta-aside shrink-0">Morrison<br>2024</div>
+        </div>
+      </button>
+    </article>
+
+    <article data-tags="moulding" data-title="Modern Hallway Transition" data-loc="Kerr Village · 2023" data-no="044">
+      <button class="block w-full text-left group" data-lightbox="https://lh3.googleusercontent.com/aida-public/AB6AXuBOTkJLgorbegZZnla4BWHRRyZ7nDCgnBeTLtDF0Sw4OwwSqKe4rP1g736IQMwUHqdimZDGd4YiPWalec1fNK4Xwd1N4wRgbcYcT9Jvapfc8gvqKrmx3At0QXnCLqV5qVAddlJlm63OwHHKtR-ZmD28kEzONnuM3iGtAAm13hirkurDfkJQzFVS1EY76ynUjJu3FhAR6-oghRx6kfN_wgbye7okvyLUj4G2b3jioLZDz1PsCsvOgHfkmwmkTANQg4SVPHlp7khBElc">
+        <figure class="img-frame aspect-[4/5]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOTkJLgorbegZZnla4BWHRRyZ7nDCgnBeTLtDF0Sw4OwwSqKe4rP1g736IQMwUHqdimZDGd4YiPWalec1fNK4Xwd1N4wRgbcYcT9Jvapfc8gvqKrmx3At0QXnCLqV5qVAddlJlm63OwHHKtR-ZmD28kEzONnuM3iGtAAm13hirkurDfkJQzFVS1EY76ynUjJu3FhAR6-oghRx6kfN_wgbye7okvyLUj4G2b3jioLZDz1PsCsvOgHfkmwmkTANQg4SVPHlp7khBElc" alt="Modern Hallway Transition">
+        </figure>
+        <div class="mt-3 meta-row">
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-walnut font-mono">044 · Trim Package</div>
+            <h3 class="font-sans font-semibold text-h5 text-ink mt-1 group-hover:text-walnut transition-colors">Modern Hallway Transition</h3>
+          </div>
+          <div class="meta-aside shrink-0">Kerr&nbsp;Village<br>2023</div>
+        </div>
+      </button>
+    </article>
+
+    <article data-tags="cabinetry" data-title="Artisan Routing Study" data-loc="Bronte · 2024" data-no="045">
+      <button class="block w-full text-left group" data-lightbox="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8Q-uUTPFOeJv1-Nox4VOIqMzFB9vYIHWHJQMF-IaMSgcvaGM2yCNy6xBWdcCoaNoq4eFCoWXXbJCSiYkxsee4XKV7sZIvwd2vl9aTlhA_7s81SfcHXmR12Gx8lZcrpV6spJ7TBZSzv49htJ4Hd4vdzmQ-QxT3X9ph7KWLBJlyokT-FiViH4Tni2r4GF3RT8UMHCzzcRQdcFF-0meHm7ddw1C1oIgm3giZ3InHXPlP9qB41v428TGYoMLvEMvoW9-HaRuJunPMbs">
+        <figure class="img-frame aspect-[1/1]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB8Q-uUTPFOeJv1-Nox4VOIqMzFB9vYIHWHJQMF-IaMSgcvaGM2yCNy6xBWdcCoaNoq4eFCoWXXbJCSiYkxsee4XKV7sZIvwd2vl9aTlhA_7s81SfcHXmR12Gx8lZcrpV6spJ7TBZSzv49htJ4Hd4vdzmQ-QxT3X9ph7KWLBJlyokT-FiViH4Tni2r4GF3RT8UMHCzzcRQdcFF-0meHm7ddw1C1oIgm3giZ3InHXPlP9qB41v428TGYoMLvEMvoW9-HaRuJunPMbs" alt="Artisan Island Detailing">
+        </figure>
+        <div class="mt-3 meta-row">
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-walnut font-mono">045 · Island Detail</div>
+            <h3 class="font-sans font-semibold text-h5 text-ink mt-1 group-hover:text-walnut transition-colors">Artisan Routing Study</h3>
+          </div>
+          <div class="meta-aside shrink-0">Bronte<br>2024</div>
+        </div>
+      </button>
+    </article>
+
+    <article data-tags="ceilings" data-title="Geometric Coffered Ceiling" data-loc="Joshua Creek · 2023" data-no="046">
+      <button class="block w-full text-left group" data-lightbox="https://lh3.googleusercontent.com/aida-public/AB6AXuCYKrspo7xhCCNRy6F4J_3BAtFas7wfWpIo66DCyStf3x91aL3T1YFnx9tXyXPcYbgJCJKMRM7CvlM3A4MDQgLo4nui2PB_pcL86G-QkuoDCSIGi49SB_6aFZkYL-5fOrkBtXh_JQK2OiGjtu5AZAd5y44VVjIAooq0LTvet5yFt6ofxsvzgosdn3V-6BRv9xdYGaQTbyd6GTqGSIN59sgWSTxEzbgmZ7EFOezWIqtyMjGfwpuoOXG837XHa8xQ-EYxetqPTIkC-Xk">
+        <figure class="img-frame aspect-[4/3]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYKrspo7xhCCNRy6F4J_3BAtFas7wfWpIo66DCyStf3x91aL3T1YFnx9tXyXPcYbgJCJKMRM7CvlM3A4MDQgLo4nui2PB_pcL86G-QkuoDCSIGi49SB_6aFZkYL-5fOrkBtXh_JQK2OiGjtu5AZAd5y44VVjIAooq0LTvet5yFt6ofxsvzgosdn3V-6BRv9xdYGaQTbyd6GTqGSIN59sgWSTxEzbgmZ7EFOezWIqtyMjGfwpuoOXG837XHa8xQ-EYxetqPTIkC-Xk" alt="Geometric Coffered Ceiling">
+        </figure>
+        <div class="mt-3 meta-row">
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-walnut font-mono">046 · Ceiling</div>
+            <h3 class="font-sans font-semibold text-h5 text-ink mt-1 group-hover:text-walnut transition-colors">Geometric Coffered Ceiling</h3>
+          </div>
+          <div class="meta-aside shrink-0">Joshua&nbsp;Creek<br>2023</div>
+        </div>
+      </button>
+    </article>
+
+    <article data-tags="moulding cabinetry" data-title="Crown detail sample" data-loc="Halton · Trim" data-no="038">
+      <button class="block w-full text-left group" data-lightbox="https://lh3.googleusercontent.com/aida-public/AB6AXuCpoDObkYkWbWQHew9vJHsAb-hzBG9FBXuQj9JxK_pEI6QXw0c0xPLHPZjDaS3V6uVCAZ4vI-jGRDj8LSnZcmXtZAYG3GJRQgkN2x1Pv_LW7h_cKOS6hHcICCf8unfpHAH9GlKuiWqxOGOD8b0N-AJwkciqXJjoRfWGD59S_exMDpzx_k76IB8EKCSXl-eU-VEM0L9gciQAOUFQgDHsh7fe30gFOFD7O-tpKrC4cF2ps64dtqfO0a8XsrTMRVUr_uxi7dkWiRtbOwg">
+        <figure class="img-frame aspect-[3/4]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpoDObkYkWbWQHew9vJHsAb-hzBG9FBXuQj9JxK_pEI6QXw0c0xPLHPZjDaS3V6uVCAZ4vI-jGRDj8LSnZcmXtZAYG3GJRQgkN2x1Pv_LW7h_cKOS6hHcICCf8unfpHAH9GlKuiWqxOGOD8b0N-AJwkciqXJjoRfWGD59S_exMDpzx_k76IB8EKCSXl-eU-VEM0L9gciQAOUFQgDHsh7fe30gFOFD7O-tpKrC4cF2ps64dtqfO0a8XsrTMRVUr_uxi7dkWiRtbOwg" alt="Crown profile studies">
+        </figure>
+        <div class="mt-3 meta-row">
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-walnut font-mono">038 · Profile Catalogue</div>
+            <h3 class="font-sans font-semibold text-h5 text-ink mt-1 group-hover:text-walnut transition-colors">Crown Studies, Plate XII</h3>
+          </div>
+          <div class="meta-aside shrink-0">Halton<br>Trim</div>
+        </div>
+      </button>
+    </article>
+
+    <article data-tags="cabinetry" data-title="Library Annex, Walnut" data-loc="Morrison · 2024" data-no="042">
+      <button class="block w-full text-left group" data-lightbox="https://lh3.googleusercontent.com/aida-public/AB6AXuDMJZq3zwt9kOW5NV8D4fra05pydhw60c2UBctLsXGwnvq0vd1roCpDUkwDZC58F8EbvF8s6ZoecNJ1ky4oX0RT36-xIJ5t_XLPaxwFc50OFAbvFUYNA1iE0dUz5Qn61Ker01MdI3KAaZxAy_UFEdKRrqGMeXdV9FPqceuzuujbrmGbnoqHSgrbdGCIzGFc0TS5JnFBAbYBUduMgQv15CjTXD5hLI2A-9Bb4WlpwJCh7X9-MduVFhXFnJsI9RxEhw_sccEf0kw3-00">
+        <figure class="img-frame aspect-[4/5]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMJZq3zwt9kOW5NV8D4fra05pydhw60c2UBctLsXGwnvq0vd1roCpDUkwDZC58F8EbvF8s6ZoecNJ1ky4oX0RT36-xIJ5t_XLPaxwFc50OFAbvFUYNA1iE0dUz5Qn61Ker01MdI3KAaZxAy_UFEdKRrqGMeXdV9FPqceuzuujbrmGbnoqHSgrbdGCIzGFc0TS5JnFBAbYBUduMgQv15CjTXD5hLI2A-9Bb4WlpwJCh7X9-MduVFhXFnJsI9RxEhw_sccEf0kw3-00" alt="Walnut library annex">
+        </figure>
+        <div class="mt-3 meta-row">
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-walnut font-mono">042 · Library Annex</div>
+            <h3 class="font-sans font-semibold text-h5 text-ink mt-1 group-hover:text-walnut transition-colors">Library Annex, Walnut</h3>
+          </div>
+          <div class="meta-aside shrink-0">Morrison<br>2024</div>
+        </div>
+      </button>
+    </article>
+
+    <article data-tags="wainscoting" data-title="Geometric Panelling, Study" data-loc="Burlington · 2023" data-no="039">
+      <button class="block w-full text-left group" data-lightbox="https://lh3.googleusercontent.com/aida-public/AB6AXuCaKXCy7vRviO4E9kSplF_461TkZr4yOX1VkR4mrj5S-ryCPEqYNG4RgoZag9IX-FS7Jcn36kxAXK8vdooEBhDvh8g_Y_EVMwqYR00uqS_xrl934FQK-lFjsM0ct8s_B1L5rreroYwh8NbKPkk4kdscr6lcXeUuqkUUVLuaWKLy3B1gE8lTQWHeBamkoMQvIILUpfH2vvmrKx0-lEzcFSy35QUOs9pw2L3kv0F2eZdhA-rUOQ-wIMKh60_itcugX1Zm6sHeKIx9WIg">
+        <figure class="img-frame aspect-[4/5]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaKXCy7vRviO4E9kSplF_461TkZr4yOX1VkR4mrj5S-ryCPEqYNG4RgoZag9IX-FS7Jcn36kxAXK8vdooEBhDvh8g_Y_EVMwqYR00uqS_xrl934FQK-lFjsM0ct8s_B1L5rreroYwh8NbKPkk4kdscr6lcXeUuqkUUVLuaWKLy3B1gE8lTQWHeBamkoMQvIILUpfH2vvmrKx0-lEzcFSy35QUOs9pw2L3kv0F2eZdhA-rUOQ-wIMKh60_itcugX1Zm6sHeKIx9WIg" alt="Geometric paneling on dark wall">
+        </figure>
+        <div class="mt-3 meta-row">
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-walnut font-mono">039 · Wainscoting</div>
+            <h3 class="font-sans font-semibold text-h5 text-ink mt-1 group-hover:text-walnut transition-colors">Geometric Panelling, Study</h3>
+          </div>
+          <div class="meta-aside shrink-0">Burlington<br>2023</div>
+        </div>
+      </button>
+    </article>
+
+    <article data-tags="ceilings moulding" data-title="Tray Ceiling, Master Suite" data-loc="Forest Hill · 2023" data-no="040">
+      <button class="block w-full text-left group" data-lightbox="https://lh3.googleusercontent.com/aida-public/AB6AXuDRU4yYHa0syvB1RDgiguOwZAVxaV5GdvLLYaAjhK5PLiIyS5fqUyOoK0bKc33TDRvijhK2OCbNXlFSRm1IvCLW1lF4TkmXncmWo0i1Pwdtupb7myoK30Hd3JsLVHo_z7KBJ48jQi5jKhUV6l_6YauuMhUWrCkfyBu83Tco-sfzcPndiiJUZSe_e7duKG1WxE5XPC1sBaQ7BFTnVHAlbjstLCuNcl1l33nznS2hnS_at3G2U9--8akYKSFIOahtCuDAJbnt7xgmwI0">
+        <figure class="img-frame aspect-[4/3]">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRU4yYHa0syvB1RDgiguOwZAVxaV5GdvLLYaAjhK5PLiIyS5fqUyOoK0bKc33TDRvijhK2OCbNXlFSRm1IvCLW1lF4TkmXncmWo0i1Pwdtupb7myoK30Hd3JsLVHo_z7KBJ48jQi5jKhUV6l_6YauuMhUWrCkfyBu83Tco-sfzcPndiiJUZSe_e7duKG1WxE5XPC1sBaQ7BFTnVHAlbjstLCuNcl1l33nznS2hnS_at3G2U9--8akYKSFIOahtCuDAJbnt7xgmwI0" alt="Tray ceiling with layered crown">
+        </figure>
+        <div class="mt-3 meta-row">
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-walnut font-mono">040 · Ceiling</div>
+            <h3 class="font-sans font-semibold text-h5 text-ink mt-1 group-hover:text-walnut transition-colors">Tray Ceiling, Master Suite</h3>
+          </div>
+          <div class="meta-aside shrink-0">Forest&nbsp;Hill<br>2023</div>
+        </div>
+      </button>
+    </article>
+
+  </div>
+
+  <div id="empty" class="hidden text-center py-xl">
+    <div class="numeral text-[40px] text-walnut">∅</div>
+    <p class="font-sans font-semibold text-h4 text-ink mt-3">No entries in this discipline yet.</p>
+    <p class="text-body-sm text-ink-3 mt-2">We are happy to discuss future commissions in this category.</p>
+  </div>
+</section>
+
+<!-- ───────── ARCHIVE NOTE ───────── -->
+<section class="bg-surface-2 border-y border-rule">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl">
+    <div class="grid grid-cols-12 gap-gutter items-center">
+      <div class="col-span-12 md:col-span-7">
+        <span class="eyebrow">A note on the archive</span>
+        <h2 class="font-sans font-bold text-h3 text-ink mt-6">Forty-six of three hundred and twelve.</h2>
+        <p class="text-body-lg text-ink-2 mt-5 max-w-2xl">Each room photographed is a complete commission — drawings, milling and install all by the studio. The catalogue is intentionally small; project photography happens only when natural light, finished furnishings and client permission align.</p>
+      </div>
+      <div class="col-span-12 md:col-span-4 md:col-start-9">
+        <div class="border border-rule p-7 bg-cream">
+          <div class="text-[11px] tracking-[0.22em] uppercase text-walnut">In the works</div>
+          <p class="font-sans italic text-[22px] leading-tight text-ink mt-3">A coffered library in Trafalgar and a heritage staircase in Cabbagetown.</p>
+          <p class="text-body-sm text-ink-3 mt-4">Photographed for the archive Spring 2026.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────── CTA ───────── -->
+<section class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-xl md:py-2xl text-center">
+  <span class="eyebrow center" style="justify-content:center;">Begin a commission</span>
+  <h2 class="font-sans font-bold text-h2 text-ink mt-7 max-w-3xl mx-auto">If a room in your home is asking to be drawn, we would like to see it.</h2>
+  <div class="mt-9 flex gap-3 justify-center">
+    <a href="contact.html" class="btn btn-primary" data-track="quote">Get a free quote <span class="arrow">→</span></a>
+    <a href="services.html" class="btn btn-ghost">All services</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ───────── LIGHTBOX ───────── -->
+<div id="lightbox" class="fixed inset-0 z-[60] lightbox hidden items-center justify-center p-6" role="dialog" aria-modal="true">
+  <button class="absolute top-5 right-5 text-cream w-10 h-10 border border-cream/30 hover:border-walnut-tint hover:text-walnut-tint inline-flex items-center justify-center" data-lightbox-close aria-label="Close">
+    <span class="material-symbols-outlined" style="font-size:22px;">close</span>
+  </button>
+  <img class="lightbox-img object-contain" id="lightbox-img" alt="">
+</div>
+
+<!-- ───────── FOOTER ───────── -->
+<footer class="bg-surface-ink text-cream pt-xl pb-8">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-12 gap-gutter pb-12 md:pb-16 border-b border-cream/15">
+      <div class="col-span-12 md:col-span-5">
+        <span class="inline-flex bg-white p-2">
+          <img src="logo.png" class="h-12 w-auto pointer-events-none" alt="GM Carpentry">
+        </span>
+        <p class="mt-6 text-cream/70 max-w-sm text-body">Trimworks &amp; interior finishes specialist serving Halton Region and nearby areas, including Mississauga. Crown moulding, baseboards, casing, wainscoting and finish carpentry by GM Carpentry.</p>
+      </div>
+      <div class="col-span-6 md:col-span-2">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Site</div>
+        <ul class="space-y-3 text-body-sm text-cream/80">
+          <li><a href="index.html" class="hover:text-walnut-tint">Home</a></li>
+          <li><a href="portfolio.html" class="hover:text-walnut-tint">Portfolio</a></li>
+          <li><a href="services.html" class="hover:text-walnut-tint">Services</a></li>
+          <li><a href="contact.html" class="hover:text-walnut-tint">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-span-6 md:col-span-2">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Disciplines</div>
+        <ul class="space-y-3 text-body-sm text-cream/80">
+          <li><a href="services.html#molding" class="hover:text-walnut-tint">Moulding &amp; Trim</a></li>
+          <li><a href="services.html#wainscoting" class="hover:text-walnut-tint">Wainscoting</a></li>
+          <li><a href="services.html#cabinetry" class="hover:text-walnut-tint">Cabinetry</a></li>
+          <li><a href="services.html#ceilings" class="hover:text-walnut-tint">Ceilings</a></li>
+        </ul>
+      </div>
+      <div class="col-span-12 md:col-span-3">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Reach us</div>
+        <address class="not-italic text-body-sm text-cream/80 space-y-2 leading-[1.7]">
+          <div class="font-medium text-cream">Service area</div>
+          <div>Oakville, ON — Halton Region<br><span class="text-cream/60">Oakville · Burlington · Milton · Georgetown · Halton Hills · Mississauga</span></div>
+          <div class="pt-2">
+            <a href="tel:+16472895306" class="hover:text-walnut-tint">(647) 289-5306</a><br>
+            <a href="mailto:studio@gmcarpentry.ca" class="hover:text-walnut-tint">studio@gmcarpentry.ca</a>
+          </div>
+          <div class="pt-3 text-[12px] text-cream/60">
+            We respond during business hours
+          </div>
+          <div class="pt-2">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=GM+Carpentry+%26+Trimworks" class="hover:text-walnut-tint text-[12px] tracking-[0.14em] uppercase" target="_blank" rel="noopener noreferrer">Google Maps →</a>
+          </div>
+        </address>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-7 text-[11px] tracking-[0.18em] uppercase text-cream/50">
+      <div>© <span data-year>2024</span> GM Carpentry &amp; Trimworks · Oakville, ON</div>
+      <div class="flex items-center gap-6">
+        <span>Oakville · Burlington · Milton · Georgetown · Halton Hills · Mississauga</span>
+        <a href="#" class="hover:text-walnut-tint">Privacy</a>
+        <a href="#" class="hover:text-walnut-tint">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script>
+  // Filters
+  const chips = document.querySelectorAll('[data-filter]');
+  const cards = document.querySelectorAll('#grid > article');
+  const count = document.querySelector('[data-count]');
+  const empty = document.getElementById('empty');
+  chips.forEach(chip => chip.addEventListener('click', () => {
+    chips.forEach(c => c.classList.remove('active','text-ink')); chips.forEach(c=>c.classList.add('text-ink-3'));
+    chip.classList.add('active'); chip.classList.remove('text-ink-3');
+    const f = chip.dataset.filter;
+    let shown = 0;
+    cards.forEach(card => {
+      const tags = (card.dataset.tags || '').split(/\s+/);
+      const ok = f === 'all' || tags.includes(f);
+      card.style.display = ok ? '' : 'none';
+      if (ok) shown++;
+    });
+    count.textContent = shown;
+    empty.classList.toggle('hidden', shown !== 0);
+  }));
+
+  // Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('[data-lightbox]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      lbImg.src = btn.dataset.lightbox;
+      lb.classList.remove('hidden'); lb.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+  const closeLb = () => { lb.classList.add('hidden'); lb.classList.remove('flex'); document.body.style.overflow = ''; };
+  document.querySelector('[data-lightbox-close]').addEventListener('click', closeLb);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+</script>
+<script src="chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 260" role="img" aria-labelledby="logo-title logo-desc">
+  <title id="logo-title">GM Carpentry</title>
+  <desc id="logo-desc">Close vector recreation of the GM Carpentry reference logo using editable text and simple vector shapes.</desc>
+
+  <g fill="#231f20">
+    <text
+      x="50"
+      y="196"
+      font-family="Impact, 'Arial Black', Helvetica, Arial, sans-serif"
+      font-size="205"
+      font-weight="900"
+      letter-spacing="-18">GM</text>
+  </g>
+
+  <g fill="#356fa5" stroke="#fff" stroke-width="7" stroke-linejoin="miter">
+    <path d="M272 7H344L357 34H259Z"/>
+    <path d="M270 34H349L321 151H299Z"/>
+  </g>
+
+  <text
+    x="225"
+    y="249"
+    text-anchor="middle"
+    fill="#356fa5"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="54"
+    font-weight="400"
+    letter-spacing="15">CARPENTRY</text>
+</svg>

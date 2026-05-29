@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Contact · GM Carpentry &amp; Trimworks</title>
+<meta name="description" content="Contact GM Carpentry &amp; Trimworks. Based in Oakville, serving Halton Region and nearby areas, including Mississauga. Call (647) 289-5306.">
+
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&amp;display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+<script src="tw-config.js"></script>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="chatbot.css">
+
+<style>
+  /* Form steps progress */
+  .step-rule { flex: 1; height: 2px; background: var(--rule); }
+  .step-rule.active { background: var(--walnut); }
+</style>
+</head>
+<body class="bg-surface text-ink font-sans">
+
+<!-- ───────── UTILITY BAR ───────── -->
+<div class="bg-surface-ink text-cream/80 text-[12px] tracking-[0.18em] uppercase">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-9">
+    <div class="hidden md:flex items-center gap-6">
+      <span class="inline-flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-walnut-3"></span>Request a free quote</span>
+      <span class="opacity-50">Oakville · Halton · Mississauga</span>
+    </div>
+    <div class="flex items-center gap-5 ml-auto">
+      <a href="tel:+16472895306" class="hover:text-walnut-tint transition-colors" data-track="call">(647) 289&nbsp;5306</a>
+      <span class="opacity-30 hidden md:inline">/</span>
+      <a href="mailto:studio@gmcarpentry.ca" class="hidden md:inline hover:text-walnut-tint transition-colors">studio@gmcarpentry.ca</a>
+    </div>
+  </div>
+</div>
+
+<!-- ───────── HEADER ───────── -->
+<header data-header class="sticky top-0 z-40 bg-surface/90 backdrop-blur border-b border-rule transition-all">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop flex items-center justify-between h-[76px]">
+    <a href="index.html" class="flex items-center gap-3 text-ink" aria-label="GM Carpentry — Home">
+      <img src="logo.png" class="h-10 w-auto pointer-events-none" alt="GM Carpentry">
+    </a>
+    <nav class="hidden lg:flex items-center gap-9">
+      <a href="index.html"     class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Home</a>
+      <a href="portfolio.html" class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Portfolio</a>
+      <a href="services.html"  class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Services</a>
+      <a href="index.html#process"   class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Process</a>
+      <a href="index.html#materials" class="text-[13px] uppercase tracking-[0.18em] font-semibold text-ink-2 hover:text-walnut transition-colors">Materials</a>
+      <a href="contact.html"   class="text-[13px] uppercase tracking-[0.18em] font-semibold text-walnut border-b border-walnut pb-1">Contact</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <a href="#inquire" class="btn btn-primary hidden md:inline-flex" data-track="quote">Get a free quote <span class="arrow">→</span></a>
+      <button class="lg:hidden text-ink menu-btn -mr-2" data-mobile-toggle aria-label="Open menu">
+        <span class="material-symbols-outlined" style="font-size:28px;">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<aside class="mobile-menu fixed inset-0 z-50 bg-surface flex flex-col" data-mobile-menu>
+  <div class="flex items-center justify-between h-[76px] px-margin-mobile border-b border-rule">
+    <img src="logo.png" class="h-10 w-auto pointer-events-none" alt="GM Carpentry">
+    <button data-mobile-close class="menu-btn -mr-2" aria-label="Close menu"><span class="material-symbols-outlined" style="font-size:28px;">close</span></button>
+  </div>
+  <nav class="flex flex-col gap-1 p-margin-mobile">
+    <a href="index.html"     class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Home</a>
+    <a href="portfolio.html" class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Portfolio</a>
+    <a href="services.html"  class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Services</a>
+    <a href="index.html#process"   class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Process</a>
+    <a href="index.html#materials" class="py-4 border-b border-rule font-sans font-bold text-h4 text-ink">Materials</a>
+    <a href="contact.html"   class="py-4 border-b border-rule font-sans font-bold text-h4 text-walnut">Contact</a>
+  </nav>
+</aside>
+
+<main>
+
+<!-- ───────── HEADER ───────── -->
+<section class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop pt-10 md:pt-16 pb-lg">
+  <div class="flex items-center justify-between mb-10 md:mb-12">
+    <span class="badge-arch"><span class="numeral text-[14px] leading-none">IV</span>&nbsp;Contact GM Carpentry</span>
+    <a href="index.html" class="text-[11px] tracking-[0.22em] uppercase text-ink-3 hover:text-walnut transition-colors">← Return</a>
+  </div>
+
+  <div class="grid grid-cols-12 gap-gutter items-end">
+    <div class="col-span-12 lg:col-span-8">
+      <h1 class="hero-title font-sans font-bold text-[44px] sm:text-[60px] md:text-[88px] leading-[0.98] tracking-[-0.025em] text-ink">
+        Get a free<br><span class="text-walnut">quote.</span>
+      </h1>
+    </div>
+    <div class="col-span-12 lg:col-span-4">
+      <p class="text-body-lg text-ink-2">Call <a href="tel:+16472895306" class="text-walnut hover:underline" data-track="call">(647) 289-5306</a> or send the form below. A short note is enough to start, and we'll follow up during business hours.</p>
+    </div>
+  </div>
+  <div class="ruler mt-10"></div>
+</section>
+
+<!-- ───────── INQUIRY + INFO ───────── -->
+<section id="inquire" class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop py-lg md:py-xl">
+  <div class="grid grid-cols-12 gap-gutter">
+
+    <!-- ─── FORM ─── -->
+    <div class="col-span-12 lg:col-span-7">
+      <div class="bg-cream border border-rule shadow-card">
+        <!-- Form header -->
+        <div class="px-6 md:px-8 pt-8 pb-6 border-b border-rule">
+          <div class="flex items-center justify-between">
+            <span class="eyebrow no-rule">Project inquiry</span>
+            <span class="text-[11px] tracking-[0.22em] uppercase text-ink-3 font-mono">Form 01 · Rev. C</span>
+          </div>
+          <h2 class="font-sans font-bold text-h3 text-ink mt-4">Tell us about your project.</h2>
+          <p class="text-body-sm text-ink-2 mt-3 max-w-xl">No pressure and no perfect brief needed. Send what you know, and Gary will follow up with practical next steps.</p>
+        </div>
+
+        <!-- Progress -->
+        <div class="px-6 md:px-8 pt-6">
+          <div class="flex items-center gap-3">
+            <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-walnut">Step 1 of 3</span>
+            <div class="flex-1 flex items-center gap-1">
+              <div class="step-rule active"></div>
+              <div class="step-rule"></div>
+              <div class="step-rule"></div>
+            </div>
+            <span class="font-sans text-[11px] tracking-[0.22em] uppercase text-ink-3">Particulars</span>
+          </div>
+        </div>
+
+        <div class="px-6 md:px-8 pt-6">
+          <div class="border border-rule bg-surface p-5">
+            <h3 class="font-sans font-semibold text-h6 text-ink">Before you send</h3>
+            <ul class="before-send-list text-body-sm">
+              <li>City or neighbourhood.</li>
+              <li>Rooms involved and rough dimensions if you know them.</li>
+              <li>Photos of the room, corners, ceiling or trim profile.</li>
+              <li>Timeline: urgent, soon, or just planning.</li>
+            </ul>
+          </div>
+        </div>
+
+        <form action="mailto:studio@gmcarpentry.ca" method="POST" enctype="text/plain" class="px-6 md:px-8 py-7 space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="block">
+              <label class="field-label" for="first_name">First name</label>
+              <input class="field-input" id="first_name" name="first_name" type="text" required autocomplete="given-name">
+            </div>
+            <div class="block">
+              <label class="field-label" for="last_name">Last name</label>
+              <input class="field-input" id="last_name" name="last_name" type="text" required autocomplete="family-name">
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="block">
+              <label class="field-label" for="email">Email</label>
+              <input class="field-input" id="email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="block">
+              <label class="field-label" for="phone">Phone <span class="text-ink-2 normal-case tracking-normal font-normal">(recommended)</span></label>
+              <input class="field-input" id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+
+          <div class="border-t border-rule pt-6"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div class="block">
+              <label class="field-label" for="discipline">Service</label>
+              <select class="field-input" id="discipline" name="discipline">
+                <option value="" disabled selected>Select one</option>
+                <option>Moulding &amp; Trim</option>
+                <option>Wainscoting &amp; Feature Walls</option>
+                <option>Cabinetry &amp; Built-ins</option>
+                <option>Coffered &amp; Beamed Ceilings</option>
+                <option>Doors &amp; Hardware</option>
+                <option>Home Renovations</option>
+                <option>Whole-home trim package</option>
+                <option>Trade / partnership</option>
+              </select>
+            </div>
+            <div class="block">
+              <label class="field-label" for="timeline">Timeline</label>
+              <select class="field-input" id="timeline" name="timeline">
+                <option value="" disabled selected>Select one</option>
+                <option>Immediate · within 2 months</option>
+                <option>Soon · 3–6 months</option>
+                <option>Later · 6–12 months</option>
+                <option>Just planning</option>
+              </select>
+            </div>
+          </div>
+          <div class="block">
+            <label class="field-label" for="location">Project location</label>
+            <input class="field-input" id="location" name="location" type="text" placeholder="e.g. Burlington, ON" required>
+          </div>
+          <div class="block">
+            <label class="field-label" for="details">Project details</label>
+            <textarea class="field-input" id="details" name="details" rows="5" placeholder="Which rooms, crown vs baseboards, photos you have, target start date, etc."></textarea>
+          </div>
+          <div class="block">
+            <label class="field-label" for="photos">Photos <span class="text-ink-2 normal-case tracking-normal font-normal">(optional)</span></label>
+            <input class="field-input" id="photos" name="photos" type="file" accept="image/*" multiple>
+            <p class="text-[12px] text-ink-2 mt-2">This static form opens your email app and does not upload files by itself. If photos matter, attach them in the email or send them directly to <a href="mailto:studio@gmcarpentry.ca" class="text-walnut hover:underline" data-track="email">studio@gmcarpentry.ca</a>.</p>
+          </div>
+
+          <!-- Discreet "field tick" referrer row -->
+          <fieldset class="border-t border-rule pt-6">
+            <legend class="field-label">How did you find us</legend>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <label class="cursor-pointer">
+                <input type="radio" name="ref" class="peer sr-only" value="referral" checked>
+                <span class="inline-block px-3 py-2 text-[12px] uppercase tracking-[0.16em] border border-rule peer-checked:border-walnut peer-checked:text-walnut transition-colors">Referral</span>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="ref" class="peer sr-only" value="instagram">
+                <span class="inline-block px-3 py-2 text-[12px] uppercase tracking-[0.16em] border border-rule peer-checked:border-walnut peer-checked:text-walnut transition-colors">Instagram</span>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="ref" class="peer sr-only" value="google">
+                <span class="inline-block px-3 py-2 text-[12px] uppercase tracking-[0.16em] border border-rule peer-checked:border-walnut peer-checked:text-walnut transition-colors">Google</span>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="ref" class="peer sr-only" value="facebook">
+                <span class="inline-block px-3 py-2 text-[12px] uppercase tracking-[0.16em] border border-rule peer-checked:border-walnut peer-checked:text-walnut transition-colors">Facebook</span>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="ref" class="peer sr-only" value="designer">
+                <span class="inline-block px-3 py-2 text-[12px] uppercase tracking-[0.16em] border border-rule peer-checked:border-walnut peer-checked:text-walnut transition-colors">Designer or Architect</span>
+              </label>
+              <label class="cursor-pointer">
+                <input type="radio" name="ref" class="peer sr-only" value="other">
+                <span class="inline-block px-3 py-2 text-[12px] uppercase tracking-[0.16em] border border-rule peer-checked:border-walnut peer-checked:text-walnut transition-colors">Other</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-3">
+            <p class="text-[12px] text-ink-2 max-w-sm">GM Carpentry usually responds within one business day when possible. Prefer to talk now? <a href="tel:+16472895306" class="text-walnut hover:underline" data-track="call">Call (647) 289-5306</a>.</p>
+            <button type="submit" class="btn btn-primary" data-track="quote">Send message <span class="arrow">→</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ─── SIDE INFO ─── -->
+    <aside class="col-span-12 lg:col-span-5 space-y-gutter">
+
+      <!-- The Workshop card -->
+      <div class="bg-surface-ink text-cream p-7 relative overflow-hidden">
+        <div class="corners">
+          <div class="c-tl" style="border-color: rgba(255,255,255,0.18);"></div>
+          <div class="c-tr" style="border-color: rgba(255,255,255,0.18);"></div>
+          <div class="c-bl" style="border-color: rgba(255,255,255,0.18);"></div>
+          <div class="c-br" style="border-color: rgba(255,255,255,0.18);"></div>
+        </div>
+        <div class="flex items-center justify-between mb-5">
+          <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint">GM Carpentry</div>
+          <div class="font-sans text-[11px] tracking-[0.22em] uppercase text-cream/50">Trimworks</div>
+        </div>
+        <h3 class="font-sans font-bold text-h3 text-cream leading-tight">Oakville, ON —<br>Halton Region.</h3>
+        <p class="text-body-sm text-cream/70 mt-4 max-w-sm">Service-area business based in Oakville. Site visits and consultations across Halton Region and nearby areas, including Mississauga. Request a quote and we'll follow up during business hours.</p>
+
+        <div class="mt-7 pt-6 border-t border-cream/15 grid grid-cols-2 gap-5">
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-cream/50">Call</div>
+            <a href="tel:+16472895306" class="text-cream block mt-2 font-mono" data-track="call">(647)&nbsp;289-5306</a>
+          </div>
+          <div>
+            <div class="text-[11px] tracking-[0.22em] uppercase text-cream/50">Write</div>
+            <a href="mailto:studio@gmcarpentry.ca" class="text-cream block mt-2 font-mono text-[13px]">studio@<br>gmcarpentry.ca</a>
+          </div>
+          <div class="col-span-2">
+            <div class="text-[11px] tracking-[0.22em] uppercase text-cream/50">Hours</div>
+            <div class="text-cream mt-2 font-sans text-[13px]">We respond during business hours</div>
+          </div>
+        </div>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=GM+Carpentry+%26+Trimworks" class="inline-flex items-center gap-2 mt-6 text-[11px] tracking-[0.18em] uppercase text-walnut-tint hover:text-cream transition-colors" target="_blank" rel="noopener noreferrer" data-track="maps">View on Google Maps <span>→</span></a>
+      </div>
+
+      <!-- Map embed (OpenStreetMap, no API key required) -->
+      <div class="relative overflow-hidden border border-rule-strong" style="height:280px;">
+        <iframe
+          src="https://www.google.com/maps?q=GM+Carpentry+%26+Trimworks+Oakville+ON&output=embed"
+          width="100%"
+          height="280"
+          style="border:0;"
+          loading="lazy"
+          title="GM Carpentry service area map"
+          allowfullscreen></iframe>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=GM+Carpentry+%26+Trimworks"
+           class="absolute bottom-2 right-2 flex items-center gap-1 text-[11px] tracking-[0.14em] uppercase text-walnut-tint bg-canvas/90 px-2 py-1 rounded-sm hover:text-cream transition-colors"
+           target="_blank" rel="noopener noreferrer" data-track="maps">View on Google Maps <span>→</span></a>
+      </div>
+
+      <!-- FAQ-ish -->
+      <div class="border-t border-rule pt-6 space-y-5">
+        <div>
+          <h4 class="font-sans font-semibold text-h6 text-ink">When will you reply?</h4>
+          <p class="text-body-sm text-ink-2 mt-1">Send a message through the form and we'll reply during business hours. If we're on site, it may take a little longer.</p>
+        </div>
+        <div>
+          <h4 class="font-sans font-semibold text-h6 text-ink">What areas do you cover?</h4>
+          <p class="text-body-sm text-ink-2 mt-1">Oakville, Burlington, Milton, Georgetown, Halton Hills and nearby areas including Mississauga. Ask if you're slightly outside — we may still be able to help.</p>
+        </div>
+        <div>
+          <h4 class="font-sans font-semibold text-h6 text-ink">What should I include in my message?</h4>
+          <p class="text-body-sm text-ink-2 mt-1">City, rooms involved, photos if you have them, and whether you need crown, baseboards, wainscoting, ceilings or a full trim package.</p>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ───────── TRUST STRIP ───────── -->
+<section class="bg-surface-2 border-y border-rule py-xl">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-12 gap-gutter items-end mb-8">
+      <div class="col-span-12 md:col-span-8">
+        <span class="eyebrow">Google reviews</span>
+        <h2 class="mt-4 font-sans font-bold text-h3 text-ink">5.0 ★ from 15 homeowners.</h2>
+      </div>
+      <div class="col-span-12 md:col-span-4 md:text-right">
+        <a href="https://www.google.com/maps/place/GM+Carpentry+%26+Trimworks/@43.5201744,-79.7136365,9z/data=!3m1!4b1!4m6!3m5!1s0x882b6f79221e3e5f:0x56a4cfde23bf69d9!8m2!3d43.5201744!4d-79.7136365!16s%2Fg%2F11f3xwvpbv" class="btn-link inline-flex cursor-pointer" target="_blank" rel="noopener noreferrer" data-track="reviews">Read on Google <span class="arrow">→</span></a>
+      </div>
+    </div>
+    <p class="text-body-lg text-ink-2 max-w-2xl">"Honest and trustworthy." "Amazing work — detailed and didn't rush." "A true professional." — recent Google reviews for crown moulding and trim work across Halton Region and nearby areas, including Mississauga.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ───────── FOOTER ───────── -->
+<footer class="bg-surface-ink text-cream pt-xl pb-8 mt-xl">
+  <div class="max-w-[1320px] mx-auto px-margin-mobile md:px-margin-desktop">
+    <div class="grid grid-cols-12 gap-gutter pb-12 md:pb-16 border-b border-cream/15">
+      <div class="col-span-12 md:col-span-5">
+        <span class="inline-flex bg-white p-2">
+          <img src="logo.png" class="h-12 w-auto pointer-events-none" alt="GM Carpentry">
+        </span>
+        <p class="mt-6 text-cream/70 max-w-sm text-body">Crown moulding, trim and interior finishes across Halton Region and nearby areas, including Mississauga. Oakville-based, 5.0 on Google.</p>
+      </div>
+      <div class="col-span-6 md:col-span-2">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Site</div>
+        <ul class="space-y-3 text-body-sm text-cream/80">
+          <li><a href="index.html" class="hover:text-walnut-tint">Home</a></li>
+          <li><a href="portfolio.html" class="hover:text-walnut-tint">Portfolio</a></li>
+          <li><a href="services.html" class="hover:text-walnut-tint">Services</a></li>
+          <li><a href="contact.html" class="hover:text-walnut-tint">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-span-6 md:col-span-2">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Disciplines</div>
+        <ul class="space-y-3 text-body-sm text-cream/80">
+          <li><a href="services.html#molding" class="hover:text-walnut-tint">Moulding &amp; Trim</a></li>
+          <li><a href="services.html#wainscoting" class="hover:text-walnut-tint">Wainscoting</a></li>
+          <li><a href="services.html#cabinetry" class="hover:text-walnut-tint">Cabinetry</a></li>
+          <li><a href="services.html#ceilings" class="hover:text-walnut-tint">Ceilings</a></li>
+        </ul>
+      </div>
+      <div class="col-span-12 md:col-span-3">
+        <div class="text-[11px] tracking-[0.22em] uppercase text-walnut-tint mb-5">Reach us</div>
+        <address class="not-italic text-body-sm text-cream/80 space-y-2 leading-[1.7]">
+          <div class="font-medium text-cream">Service area</div>
+          <div>Oakville, ON — Halton Region<br><span class="text-cream/60">Oakville · Burlington · Milton · Georgetown · Halton Hills · Mississauga</span></div>
+          <div class="pt-2">
+            <a href="tel:+16472895306" class="hover:text-walnut-tint">(647) 289-5306</a><br>
+            <a href="mailto:studio@gmcarpentry.ca" class="hover:text-walnut-tint">studio@gmcarpentry.ca</a>
+          </div>
+          <div class="pt-3 text-[12px] text-cream/60">
+            We respond during business hours
+          </div>
+          <div class="pt-2">
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=GM+Carpentry+%26+Trimworks" class="hover:text-walnut-tint text-[12px] tracking-[0.14em] uppercase" target="_blank" rel="noopener noreferrer">Google Maps →</a>
+          </div>
+        </address>
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-7 text-[11px] tracking-[0.18em] uppercase text-cream/50">
+      <div>© <span data-year>2024</span> GM Carpentry &amp; Trimworks · Oakville, ON</div>
+      <div class="flex items-center gap-6">
+        <span>Oakville · Burlington · Milton · Georgetown · Halton Hills · Mississauga</span>
+        <a href="#" class="hover:text-walnut-tint">Privacy</a>
+        <a href="#" class="hover:text-walnut-tint">Terms</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="shared.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>
