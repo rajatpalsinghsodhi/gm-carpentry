@@ -250,7 +250,9 @@
 /* Messages */
 .gm-chat-body {
   flex: 1;
+  min-height: 0;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 18px;
   display: flex;
   flex-direction: column;
@@ -365,12 +367,17 @@
   border: none;
   outline: none;
   font-family: 'Hanken Grotesk', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
   color: var(--ink);
   background: transparent;
   padding: 6px 0;
   min-width: 0;
+}
+@media (min-width: 768px) {
+  .gm-chat-input {
+    font-size: 14px;
+  }
 }
 .gm-chat-input::placeholder { color: var(--ink-4, #a39f97); }
 .gm-chat-send {
@@ -427,16 +434,21 @@
     left: 0;
     width: 100%;
     max-width: 100%;
-    max-height: 100vh;
+    max-height: 100svh;
     max-height: 100dvh;
-    height: 100vh;
+    height: 100svh;
     height: 100dvh;
     border: none;
     border-radius: 0;
     transform: translateY(100%);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
   }
   .gm-chat-panel.open {
     transform: translateY(0);
+  }
+  .gm-chat-panel.open.keyboard-open {
+    height: calc(100dvh - var(--gm-vv-bottom, 0px));
+    max-height: calc(100dvh - var(--gm-vv-bottom, 0px));
   }
   .gm-chat-fab { bottom: 20px; right: 16px; }
   .gm-chat-welcome {

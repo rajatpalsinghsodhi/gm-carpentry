@@ -59,6 +59,34 @@
   let isOpen = false;
   let welcomeVisible = false;
 
+  /* ---- Mobile vs desktop input behavior ---- */
+  function prefersInputFocusOnOpen() {
+    return window.matchMedia('(min-width: 768px)').matches;
+  }
+
+  function enableMobileInput() {
+    if (input.hasAttribute('readonly')) {
+      input.removeAttribute('readonly');
+    }
+  }
+
+  function bindVisualViewport() {
+    if (!window.visualViewport) return;
+    function syncKeyboardInset() {
+      if (!isOpen || prefersInputFocusOnOpen()) {
+        panel.style.removeProperty('--gm-vv-bottom');
+        panel.classList.remove('keyboard-open');
+        return;
+      }
+      var vv = window.visualViewport;
+      var inset = Math.max(0, window.innerHeight - vv.height - vv.offsetTop);
+      panel.style.setProperty('--gm-vv-bottom', inset + 'px');
+      panel.classList.toggle('keyboard-open', inset > 0);
+    }
+    window.visualViewport.addEventListener('resize', syncKeyboardInset);
+    window.visualViewport.addEventListener('scroll', syncKeyboardInset);
+  }
+
   /* ---- Open / close ---- */
   function setFabIcon(name) {
     if (fabIcon.textContent === name) return;
@@ -111,7 +139,20 @@
     if (isOpen) {
       dismissWelcome();
       fab.classList.add('seen');
-      input.focus();
+      if (prefersInputFocusOnOpen()) {
+        enableMobileInput();
+        input.focus();
+      } else {
+        input.setAttribute('readonly', 'true');
+        input.blur();
+        if (fab.blur) fab.blur();
+        scrollToBottom();
+      }
+    } else {
+      enableMobileInput();
+      input.blur();
+      panel.style.removeProperty('--gm-vv-bottom');
+      panel.classList.remove('keyboard-open');
     }
   }
   fab.addEventListener('click', function () { toggle(); });
@@ -359,6 +400,9 @@
   input.addEventListener('input', function () {
     sendBtn.disabled = !input.value.trim();
   });
+  input.addEventListener('touchstart', enableMobileInput, { passive: true });
+  input.addEventListener('focus', enableMobileInput);
+  bindVisualViewport();
 
   /* ---- Welcome popup ---- */
   setTimeout(showWelcome, 1500);
