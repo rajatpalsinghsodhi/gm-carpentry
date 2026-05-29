@@ -6,6 +6,14 @@
       <span class="material-symbols-outlined gm-chat-fab-icon" id="gmChatFabIcon" aria-hidden="true">chat</span>
       <span class="gm-chat-fab-badge" aria-hidden="true"></span>
     </button>
+    <div class="gm-chat-welcome" id="gmChatWelcome" role="status" aria-live="polite" hidden>
+      <div class="gm-chat-welcome-inner">
+        <p class="gm-chat-welcome-text">Have a question about trim or finish carpentry? Tap to chat with our mockup assistant — simulated responses, not live AI.</p>
+        <button class="gm-chat-welcome-close" id="gmChatWelcomeClose" type="button" aria-label="Dismiss welcome message">
+          <span class="material-symbols-outlined" aria-hidden="true">close</span>
+        </button>
+      </div>
+    </div>
     <div class="gm-chat-panel" id="gmChatPanel" role="dialog" aria-label="Chat with GM Carpentry">
       <div class="gm-chat-header">
         <div class="gm-chat-header-avatar">GM</div>
@@ -42,8 +50,12 @@
   const input   = document.getElementById('gmChatInput');
   const sendBtn = document.getElementById('gmChatSend');
   const closeBtn= document.getElementById('gmChatClose');
+  const welcomeEl = document.getElementById('gmChatWelcome');
+  const welcomeCloseBtn = document.getElementById('gmChatWelcomeClose');
 
+  const WELCOME_STORAGE_KEY = 'gmChatWelcomeDismissed';
   let isOpen = false;
+  let welcomeVisible = false;
 
   /* ---- Open / close ---- */
   function setFabIcon(name) {
@@ -55,6 +67,29 @@
     }, 150);
   }
 
+  function dismissWelcome() {
+    if (!welcomeEl) return;
+    welcomeVisible = false;
+    welcomeEl.classList.remove('is-visible');
+    welcomeEl.setAttribute('hidden', '');
+    try {
+      sessionStorage.setItem(WELCOME_STORAGE_KEY, '1');
+    } catch (e) {}
+  }
+
+  function showWelcome() {
+    if (!welcomeEl) return;
+    try {
+      if (sessionStorage.getItem(WELCOME_STORAGE_KEY)) return;
+    } catch (e) {}
+    if (isOpen) return;
+    welcomeVisible = true;
+    welcomeEl.removeAttribute('hidden');
+    requestAnimationFrame(function () {
+      welcomeEl.classList.add('is-visible');
+    });
+  }
+
   function toggle(open) {
     isOpen = typeof open === 'boolean' ? open : !isOpen;
     panel.classList.toggle('open', isOpen);
@@ -63,11 +98,16 @@
     fab.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     setFabIcon(isOpen ? 'close' : 'chat');
     if (isOpen) {
+      dismissWelcome();
       fab.classList.add('seen');
       input.focus();
     }
   }
   fab.addEventListener('click', function () { toggle(); });
+  welcomeCloseBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    dismissWelcome();
+  });
   closeBtn.addEventListener('click', function () { toggle(false); });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && isOpen) toggle(false);
@@ -304,6 +344,9 @@
   input.addEventListener('input', function () {
     sendBtn.disabled = !input.value.trim();
   });
+
+  /* ---- Welcome popup ---- */
+  setTimeout(showWelcome, 1500);
 
   /* ---- Welcome sequence ---- */
   setTimeout(function () {
